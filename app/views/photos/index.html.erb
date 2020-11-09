@@ -1,0 +1,7 @@
+<h1>Add a new category</h1>
+
+<ul>
+  <% @photos.each do |photo| %>
+    <li><%= photo.category %></li>
+  <% end %>
+</ul>
