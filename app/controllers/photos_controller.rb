@@ -14,8 +14,7 @@ class PhotosController < ApplicationController
 
   def create
     @photo = Photo.new(photo_params)
-    # @candy.user = current_user
-    if @candy.save
+    if @photo.save
       redirect_to root_path
     else
       render :new
@@ -23,7 +22,7 @@ class PhotosController < ApplicationController
   end
 
   def edit
-    @photo = current_user.photos.find_by(id: params[:id])
+    @photo = Photo.find_by(id: params[:id])
   end
 
   def update

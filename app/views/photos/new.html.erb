@@ -1,1 +1,8 @@
-new.html.erb
+<div>
+  <h1>Add a new category</h1>
+</div>
+
+
+<%= render 'form', photo: @photo %>
+
+<%= link_to "Back", root_path, class:'btn btn-primary'%>

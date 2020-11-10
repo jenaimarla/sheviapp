@@ -1,7 +1,12 @@
-<h1>Add a new category</h1>
+
 
 <ul>
   <% @photos.each do |photo| %>
     <li><%= photo.category %></li>
+    <%= link_to 'edit', edit_photo_path([:photo_id])  %>
   <% end %>
 </ul>
+
+<%= link_to 'Add new category', new_photo_path %>
+
+
