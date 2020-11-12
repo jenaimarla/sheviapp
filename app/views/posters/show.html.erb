@@ -1,0 +1,13 @@
+ <% @poster.themes.each do |theme| %>
+    <li class="list-group-item"><%= link_to theme.description, theme_path(theme) %></li>
+    <%= link_to 'Edit', edit_theme_path(theme) %>
+    <%= link_to 'Delete image', theme_path(theme),
+                  method: :delete,
+                  data: { confirm: "Are you sure?" } %>
+  <% end %>
+
+<%= link_to 'Add new image',  new_poster_theme_path(@poster) %>
+
+
+<%= link_to 'Back', posters_path  %>
+

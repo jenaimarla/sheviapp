@@ -1,0 +1,12 @@
+ <% @project.librarys.each do |library| %>
+    <li class="list-group-item"><%= link_to library.about, library_path(library) %></li>
+    <%= link_to 'Edit', edit_library_path(library) %>
+    <%= link_to 'Delete image', library_path(library),
+                  method: :delete,
+                  data: { confirm: "Are you sure?" } %>
+  <% end %>
+
+<%= link_to 'Add new image',  new_project_library_path(@project) %>
+
+
+<%= link_to 'Back', projects_path  %>

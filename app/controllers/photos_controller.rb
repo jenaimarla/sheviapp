@@ -22,7 +22,7 @@ class PhotosController < ApplicationController
   end
 
   def edit
-    @photo = Photo.find_by(id: params[:id])
+    @photo = Photo.find(params[:id])
   end
 
   def update

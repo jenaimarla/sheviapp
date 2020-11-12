@@ -1,1 +1,12 @@
-show.html.erb
+ <% @photo.images.each do |image| %>
+    <li class="list-group-item"><%= link_to image.name, image_path(image) %></li>
+    <%= link_to 'Edit', edit_image_path(image) %>
+    <%= link_to 'Delete image', image_path(image),
+                  method: :delete,
+                  data: { confirm: "Are you sure?" } %>
+  <% end %>
+
+<%= link_to 'Add new image',  new_photo_image_path(@photo) %>
+
+
+<%= link_to 'Back', photos_path  %>

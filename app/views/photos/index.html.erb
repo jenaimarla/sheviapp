@@ -2,8 +2,11 @@
 
 <ul>
   <% @photos.each do |photo| %>
-    <li><%= photo.category %></li>
-    <%= link_to 'edit', edit_photo_path([:photo_id])  %>
+    <li><%= link_to photo.category, photo_path(photo)  %></li>
+    <%= link_to 'edit', edit_photo_path(photo)  %>
+    <%= link_to 'delete', photo_path(photo),
+                  method: :delete,
+                  data: { confirm: "Are you sure?" } %>
   <% end %>
 </ul>
 

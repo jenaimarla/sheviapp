@@ -17,3 +17,25 @@ photos_attributes = [
 ]
 
 Photo.create!(photos_attributes)
+
+
+posters_attributes = [
+  {
+    title:         'Circle',
+
+  }
+]
+
+Poster.create!(posters_attributes)
+
+
+projects_attributes = [
+  {
+    project_type:         'book',
+
+  }
+]
+
+Project.create!(projects_attributes)
+
+

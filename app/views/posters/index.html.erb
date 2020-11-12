@@ -1,0 +1,12 @@
+
+<ul>
+  <% @posters.each do |poster| %>
+    <li><%= link_to poster.title, poster_path(poster)  %></li>
+    <%= link_to 'edit', edit_poster_path(poster)  %>
+    <%= link_to 'delete', poster_path(poster),
+                  method: :delete,
+                  data: { confirm: "Are you sure?" } %>
+  <% end %>
+</ul>
+
+<%= link_to 'Add new poster category', new_poster_path %>
