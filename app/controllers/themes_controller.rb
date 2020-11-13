@@ -49,7 +49,7 @@ class ThemesController < ApplicationController
   private
 
   def theme_params
-    params.require(:theme).permit(:description)
+    params.require(:theme).permit(:title, :description, :photo)
   end
 end
 

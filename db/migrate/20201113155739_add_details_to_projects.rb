@@ -1,0 +1,5 @@
+class AddDetailsToProjects < ActiveRecord::Migration[5.2]
+  def change
+    add_column :projects, :details, :string
+  end
+end

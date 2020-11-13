@@ -2,7 +2,10 @@
 
 <ul>
   <% @photos.each do |photo| %>
-    <li><%= link_to photo.category, photo_path(photo)  %></li>
+    <li><%= link_to photo.category, photo_path(photo)  %>
+      <%= cl_image_tag photo.photo.key, height: 300, width: 400, crop: :fill %>
+    </li>
+
     <%= link_to 'edit', edit_photo_path(photo)  %>
     <%= link_to 'delete', photo_path(photo),
                   method: :delete,

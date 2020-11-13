@@ -1,7 +1,8 @@
 
 <ul>
   <% @posters.each do |poster| %>
-    <li><%= link_to poster.title, poster_path(poster)  %></li>
+    <li><%= link_to poster.title, poster_path(poster)  %>
+    </li>
     <%= link_to 'edit', edit_poster_path(poster)  %>
     <%= link_to 'delete', poster_path(poster),
                   method: :delete,
