@@ -1,5 +1,7 @@
  <% @project.librarys.each do |library| %>
-    <li class="list-group-item"><%= link_to library.about, library_path(library) %></li>
+    <li class="list-group-item"><%= link_to library.about, library_path(library) %>
+       <%= cl_image_tag library.printing.key, height: 300, width: 400, crop: :fill %>
+    </li>
     <%= link_to 'Edit', edit_library_path(library) %>
     <%= link_to 'Delete image', library_path(library),
                   method: :delete,

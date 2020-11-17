@@ -8,9 +8,7 @@ class ThemesController < ApplicationController
     @theme = Theme.find(params[:id])
   end
 
-
-  def new
-    # we need @restaurant in our `simple_form_for`
+def new
     @poster = Poster.find(params[:poster_id])
     @theme = Theme.new
   end
@@ -18,7 +16,6 @@ class ThemesController < ApplicationController
 
   def create
     @theme = Theme.new(theme_params)
-    # we need `restaurant_id` to associate review with corresponding restaurant
     @poster = Poster.find(params[:poster_id])
     @theme.poster = @poster
     @theme.save
@@ -38,6 +35,7 @@ class ThemesController < ApplicationController
       end
     end
 
+
     def destroy
       @theme = Theme.find(params[:id])
       @theme.destroy
@@ -49,8 +47,9 @@ class ThemesController < ApplicationController
   private
 
   def theme_params
-    params.require(:theme).permit(:title, :description, :photo)
+    params.require(:theme).permit(:title, :description, :illustration)
   end
+
 end
 
 

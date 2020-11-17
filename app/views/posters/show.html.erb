@@ -1,5 +1,7 @@
  <% @poster.themes.each do |theme| %>
-    <li class="list-group-item"><%= link_to theme.description, theme_path(theme) %></li>
+    <li class="list-group-item"><%= link_to theme.description, theme_path(theme) %>
+      <%= cl_image_tag theme.illustration.key, height: 300, width: 400, crop: :fill %>
+    </li>
     <%= link_to 'Edit', edit_theme_path(theme) %>
     <%= link_to 'Delete image', theme_path(theme),
                   method: :delete,

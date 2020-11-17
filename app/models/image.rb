@@ -1,6 +1,6 @@
 class Image < ApplicationRecord
   belongs_to :photo
-  has_one_attached :photo
+  has_one_attached :image
 
   validates :name, presence: true
   validates :information, presence: true

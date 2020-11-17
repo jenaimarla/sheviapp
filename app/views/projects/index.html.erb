@@ -1,7 +1,11 @@
 
 <ul>
   <% @projects.each do |project| %>
-    <li><%= link_to project.project_type, project_path(project)  %></li>
+    <li><%= link_to project.project_type, project_path(project)  %>
+       <%= cl_image_tag project.impression.key, height: 300, width: 400, crop: :fill %>
+
+
+    </li>
     <%= link_to 'edit', edit_project_path(project)  %>
     <%= link_to 'delete', project_path(project),
                   method: :delete,

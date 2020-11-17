@@ -2,6 +2,7 @@
 <ul>
   <% @posters.each do |poster| %>
     <li><%= link_to poster.title, poster_path(poster)  %>
+      <%= cl_image_tag poster.cover.key, height: 300, width: 400, crop: :fill %>
     </li>
     <%= link_to 'edit', edit_poster_path(poster)  %>
     <%= link_to 'delete', poster_path(poster),

@@ -1,6 +1,6 @@
  <% @photo.images.each do |image| %>
     <li class="list-group-item"><%= link_to image.name, image_path(image) %>
-
+         <%= cl_image_tag image.image.key, height: 300, width: 400, crop: :fill %>
     </li>
     <%= link_to 'Edit', edit_image_path(image) %>
     <%= link_to 'Delete image', image_path(image),
