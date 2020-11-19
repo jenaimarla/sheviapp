@@ -1,20 +1,30 @@
 
 
-<ul>
-  <% @photos.each do |photo| %>
-    <li><%= link_to photo.category, photo_path(photo)  %>
-      <%= cl_image_tag photo.photo.key, height: 300, width: 400, crop: :fill %>
-    </li>
+<div class="photo-container">
+      <% @photos.each do |photo| %>
+      <div class="p-container">
+        <div class="photo-1">
+        <%= cl_image_tag photo.photo.key, height: 200, width: 300, crop: :fill %>
+      </div>
+      <div class="photo-title">
+        <%= link_to photo.category, photo_path(photo) %>
+      </div>
 
-    <%= link_to 'edit', edit_photo_path(photo)  %>
-    <%= link_to 'delete', photo_path(photo),
-                  method: :delete,
-                  data: { confirm: "Are you sure?" } %>
-  <% end %>
-</ul>
+      <div class="photo-options">
+        <%= link_to 'edit', edit_photo_path(photo)  %>
+        <%= link_to 'delete', photo_path(photo),
+                      method: :delete,
+                      data: { confirm: "Are you sure?" } %>
+      </div>
 
-<%= link_to 'Add new category', new_photo_path %>
+    </div>
+    <% end %>
 
-<%= link_to 'Back', root_path  %>
+  </div>
 
+
+<div class="options">
+  <%= link_to 'Add new category', new_photo_path %>
+  <%= link_to 'Back', root_path  %>
+</div>
 
