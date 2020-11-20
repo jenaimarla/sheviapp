@@ -10,13 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_11_13_161255) do
+ActiveRecord::Schema.define(version: 2020_11_13_155739) do
+
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
 
   create_table "active_storage_attachments", force: :cascade do |t|
     t.string "name", null: false
     t.string "record_type", null: false
-    t.integer "record_id", null: false
-    t.integer "blob_id", null: false
+    t.bigint "record_id", null: false
+    t.bigint "blob_id", null: false
     t.datetime "created_at", null: false
     t.index ["blob_id"], name: "index_active_storage_attachments_on_blob_id"
     t.index ["record_type", "record_id", "name", "blob_id"], name: "index_active_storage_attachments_uniqueness", unique: true
@@ -35,7 +38,7 @@ ActiveRecord::Schema.define(version: 2020_11_13_161255) do
 
   create_table "images", force: :cascade do |t|
     t.string "name"
-    t.integer "photo_id"
+    t.bigint "photo_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "information"
@@ -44,7 +47,7 @@ ActiveRecord::Schema.define(version: 2020_11_13_161255) do
 
   create_table "libraries", force: :cascade do |t|
     t.string "about"
-    t.integer "project_id"
+    t.bigint "project_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["project_id"], name: "index_libraries_on_project_id"
@@ -72,7 +75,7 @@ ActiveRecord::Schema.define(version: 2020_11_13_161255) do
 
   create_table "themes", force: :cascade do |t|
     t.string "description"
-    t.integer "poster_id"
+    t.bigint "poster_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "title"
@@ -86,4 +89,8 @@ ActiveRecord::Schema.define(version: 2020_11_13_161255) do
     t.string "avatar"
   end
 
+  add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
+  add_foreign_key "images", "photos"
+  add_foreign_key "libraries", "projects"
+  add_foreign_key "themes", "posters"
 end
