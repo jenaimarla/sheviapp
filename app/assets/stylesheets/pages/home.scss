@@ -1,5 +1,5 @@
 html {
-  background-color: #f6f6f6;
+  background-color: #c1c1bd;
   a, h1, p {
     font-family: Helvetica;
     font-weight: lighter;
@@ -51,11 +51,11 @@ html {
 }
 
 .bio {
-  border-style: solid;
+  // border-style: solid;
   border-width: 1px;
   border-radius: 50px;
   padding:5px;
-  background-color: #c4fb6d;
+  background-color: #39ff14;
   h1 {
     font-size: 15px;
   }
@@ -75,7 +75,7 @@ html {
 .photo-box, .shop-box {
   border-style: solid;
   border-width: 1px;
-  background-color: #dddddd;
+  background-color: #9d9d9c;
 }
 
 .photo-box {
@@ -90,7 +90,7 @@ html {
 
 .p1-box, .p2-box {
   height: 34.85vh;
-  background-color: #dddddd;
+  background-color: #9d9d9c;
 }
 
 .p2-box {
@@ -117,7 +117,7 @@ footer {
     padding: 10px;
     width: 50%;
     text-align: center;
-    background-color: #bbbbbb;
+    background-color: #9d9d9c;
   }
 }
 
