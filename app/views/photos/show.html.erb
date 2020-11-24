@@ -4,7 +4,7 @@
  <% @photo.images.each do |image| %>
  <div class="p-container">
   <div class="photo-1">
-    <%= cl_image_tag image.image.key, height: 200, width: 200%>
+    <%= cl_image_tag image.image.key, height: 250, width: 200%>
   </div>
     <div class="photo-title">
     <%= link_to image.name, image_path(image) %>
