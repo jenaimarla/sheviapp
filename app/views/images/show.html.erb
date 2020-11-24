@@ -1,3 +1,15 @@
-<h1>SHOW IMAGE</h1>
+<div class="image-container">
+  <div class="image-box">
+    <%= cl_image_tag @image.image.key %>
+  </div>
 
-<%= cl_image_tag @image.image.key, height: 300, width: 400, crop: :fill %>
+  <div class="image-info">
+    <div class="image-info1">
+    <h1><%= @image.photo.category %></h1>
+    <h1> <%= @image.name %></h1>
+    </div>
+    <div class="image-other">
+    <h1> <%= @image.information %> </h1>
+    </div>
+  </div>
+</div>

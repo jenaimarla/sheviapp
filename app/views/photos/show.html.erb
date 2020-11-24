@@ -1,12 +1,27 @@
+
+<div class="poster-container">
+
  <% @photo.images.each do |image| %>
-    <li class="list-group-item"><%= link_to image.name, image_path(image) %>
-         <%= cl_image_tag image.image.key, height: 300, width: 400, crop: :fill %>
-    </li>
+ <div class="p-container">
+  <div class="photo-1">
+    <%= cl_image_tag image.image.key, height: 200, width: 200, crop: :fill %>
+  </div>
+    <div class="photo-title">
+    <%= link_to image.name, image_path(image) %>
+    </div>
+
+  <div class="photo-options">
     <%= link_to 'Edit', edit_image_path(image) %>
     <%= link_to 'Delete image', image_path(image),
                   method: :delete,
                   data: { confirm: "Are you sure?" } %>
+  </div>
+  </div>
   <% end %>
 
+</div>
+
+<div class="options">
 <%= link_to 'Add new image',  new_photo_image_path(@photo) %>
 <%= link_to 'Back', photos_path  %>
+</div>
