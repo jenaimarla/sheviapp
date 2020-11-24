@@ -14,6 +14,7 @@ html {
 }
 
 .menu-1 {
+  width: 30%;
   svg {
     width: 350px;
     margin-top: -110px;
@@ -23,7 +24,8 @@ html {
 
 
 .menu-2 {
-  width: 85%;
+  position: relative;
+  width: 70%;
 }
 
 .links {
@@ -115,7 +117,7 @@ html {
 }
 
 .p-box {
-  width: 50%;
+  width: 40%;
   border-top-style: solid;
   border-width: 1px;
 }
@@ -131,7 +133,7 @@ html {
   border-width: 1px;
 }
 .shop-box {
-  width: 5%;
+  width: 10%;
   writing-mode: vertical-rl;
 }
 
