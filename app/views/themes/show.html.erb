@@ -1,1 +1,15 @@
-<h1>SHOW POSTER</h1>
+<div class="theme-container">
+  <div class="theme-box">
+    <%= cl_image_tag @theme.illustration.key %>
+  </div>
+
+  <div class="theme-info">
+    <div class="theme-info1">
+    <h1><%= @theme.title %></h1>
+    <h1> <%= @theme.description %></h1>
+    </div>
+    <div class="theme-other">
+    <h1> <%= @theme.information %> </h1>
+    </div>
+  </div>
+</div>

@@ -1,3 +1,51 @@
 // Place all the styles related to the themes controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.theme-container {
+  display: flex;
+  border-style: solid;
+  border-width: 1px;
+  width:50%;
+  height: 600px;
+  margin: auto;
+  margin-top: -130px;
+  background-color: #9d9d9c;
+}
+
+.theme-box {
+  width: 70%;
+  img {
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 10%;
+    width: 70%;
+    height: 90%;
+    margin: 30px;
+  }
+}
+
+
+.theme-info {
+  width: 30%;
+  margin: auto;
+  margin-left: -100px;
+
+}
+
+.theme-info1 {
+  padding: 5px;
+  h1 {
+    font-size: 15px;
+    text-align: left;
+  }
+}
+
+.theme-other {
+  padding: 5px;
+  margin-top: 400px;
+  h1 {
+    font-size: 15px;
+    text-align: left;
+  }
+}

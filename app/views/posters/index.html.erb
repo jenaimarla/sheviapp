@@ -1,15 +1,28 @@
 
-<ul>
+<div class="poster-container">
   <% @posters.each do |poster| %>
-    <li><%= link_to poster.title, poster_path(poster)  %>
-      <%= cl_image_tag poster.cover.key, height: 300, width: 400, crop: :fill %>
-    </li>
+  <div class="p1-container">
+    <div class="poster-1">
+      <%= cl_image_tag poster.cover.key, height: 50, width: 50, crop: :fill %>
+    </div>
+    <div class="poster-title">
+    <%= link_to poster.title, poster_path(poster)  %>
+    </div>
+
+    <div class="poster-options">
     <%= link_to 'edit', edit_poster_path(poster)  %>
     <%= link_to 'delete', poster_path(poster),
                   method: :delete,
                   data: { confirm: "Are you sure?" } %>
+    </div>
+    </div>
   <% end %>
-</ul>
+</div>
 
-<%= link_to 'Add new poster category', new_poster_path %>
-<%= link_to 'Back', root_path  %>
+<div class="options">
+  <%= link_to 'add new poster category', new_poster_path %>
+  <%= link_to 'home', root_path  %>
+</div>
+
+
+

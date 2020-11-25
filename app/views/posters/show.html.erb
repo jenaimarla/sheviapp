@@ -1,15 +1,27 @@
+
+<div class="poster-container2">
  <% @poster.themes.each do |theme| %>
-    <li class="list-group-item"><%= link_to theme.description, theme_path(theme) %>
-      <%= cl_image_tag theme.illustration.key, height: 300, width: 400, crop: :fill %>
-    </li>
+ <div class="p3-container">
+  <div class="poster-2">
+      <%= cl_image_tag theme.illustration.key%>
+    </div>
+ <div class="poster-title">
+    <%= link_to theme.description, theme_path(theme) %>
+    </div>
+
+    <div class="poster-options">
     <%= link_to 'Edit', edit_theme_path(theme) %>
     <%= link_to 'Delete image', theme_path(theme),
                   method: :delete,
                   data: { confirm: "Are you sure?" } %>
+  </div>
+  </div>
   <% end %>
 
-<%= link_to 'Add new image',  new_poster_theme_path(@poster) %>
+</div>
 
 
-<%= link_to 'Back', posters_path  %>
-
+<div class="options">
+<%= link_to 'add new poster',  new_poster_theme_path(@poster) %>
+<%= link_to 'posters', posters_path  %>
+</div>
