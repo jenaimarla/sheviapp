@@ -9,18 +9,22 @@
     <%= link_to poster.title, poster_path(poster)  %>
     </div>
 
-    <div class="poster-options">
-    <%= link_to 'edit', edit_poster_path(poster)  %>
-    <%= link_to 'delete', poster_path(poster),
-                  method: :delete,
-                  data: { confirm: "Are you sure?" } %>
-    </div>
+    <% if current_user %>
+      <div class="poster-options">
+      <%= link_to 'edit', edit_poster_path(poster)  %>
+      <%= link_to 'delete', poster_path(poster),
+                    method: :delete,
+                    data: { confirm: "Are you sure?" } %>
+      </div>
+      <% end %>
     </div>
   <% end %>
 </div>
 
 <div class="options">
-  <%= link_to 'add new poster category', new_poster_path %>
+   <% if current_user %>
+    <%= link_to 'add new poster category', new_poster_path %>
+    <% end %>
   <%= link_to 'home', root_path  %>
 </div>
 

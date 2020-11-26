@@ -15,18 +15,23 @@
     <%= link_to image.name, image_path(image) %>
     </div>
 
-  <div class="photo-options">
-    <%= link_to 'Edit', edit_image_path(image) %>
-    <%= link_to 'Delete image', image_path(image),
-                  method: :delete,
-                  data: { confirm: "Are you sure?" } %>
-  </div>
+     <% if current_user %>
+
+      <div class="photo-options">
+        <%= link_to 'Edit', edit_image_path(image) %>
+        <%= link_to 'Delete image', image_path(image),
+                      method: :delete,
+                      data: { confirm: "Are you sure?" } %>
+      </div>
+      <% end %>
   </div>
   <% end %>
 
 </div>
 
 <div class="options">
-<%= link_to 'add new photo',  new_photo_image_path(@photo) %>
+   <% if current_user %>
+    <%= link_to 'add new photo',  new_photo_image_path(@photo) %>
+    <% end %>
 <%= link_to 'photos', photos_path  %>
 </div>

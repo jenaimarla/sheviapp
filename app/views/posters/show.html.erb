@@ -9,12 +9,14 @@
     <%= link_to theme.description, theme_path(theme) %>
     </div>
 
-    <div class="poster-options">
-    <%= link_to 'Edit', edit_theme_path(theme) %>
-    <%= link_to 'Delete image', theme_path(theme),
-                  method: :delete,
-                  data: { confirm: "Are you sure?" } %>
-  </div>
+    <% if current_user %>
+      <div class="poster-options">
+      <%= link_to 'Edit', edit_theme_path(theme) %>
+      <%= link_to 'Delete image', theme_path(theme),
+                    method: :delete,
+                    data: { confirm: "Are you sure?" } %>
+      </div>
+    <%end %>
   </div>
   <% end %>
 
@@ -22,6 +24,8 @@
 
 
 <div class="options">
-<%= link_to 'add new poster',  new_poster_theme_path(@poster) %>
+   <% if current_user %>
+    <%= link_to 'add new poster',  new_poster_theme_path(@poster) %>
+    <% end %>
 <%= link_to 'posters', posters_path  %>
 </div>

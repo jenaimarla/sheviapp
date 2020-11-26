@@ -10,12 +10,15 @@
         <%= link_to photo.category, photo_path(photo) %>
       </div>
 
+      <% if current_user %>
+
       <div class="photo-options">
         <%= link_to 'edit', edit_photo_path(photo)  %>
         <%= link_to 'delete', photo_path(photo),
                       method: :delete,
                       data: { confirm: "Are you sure?" } %>
       </div>
+      <% end %>
 
     </div>
     <% end %>
@@ -24,7 +27,9 @@
 
 
 <div class="options">
+   <% if current_user %>
   <%= link_to 'add new photo category', new_photo_path %>
+  <% end %>
   <%= link_to 'home', root_path  %>
 </div>
 

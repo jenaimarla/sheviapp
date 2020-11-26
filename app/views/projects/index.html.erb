@@ -22,7 +22,9 @@
 
 
 <div class="options">
-<%= link_to 'add new project', new_project_path %>
+   <% if current_user %>
+      <%= link_to 'add new project', new_project_path %>
+      <% end %>
 <%= link_to 'home', root_path  %>
 </div>
 

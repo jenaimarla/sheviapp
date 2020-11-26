@@ -6,36 +6,6 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-Photo.destroy_all
-
-
-photos_attributes = [
-  {
-    category:         'Deep seed',
-
-  }
-]
-
-Photo.create!(photos_attributes)
-
-
-posters_attributes = [
-  {
-    title:         'Circle',
-
-  }
-]
-
-Poster.create!(posters_attributes)
-
-
-projects_attributes = [
-  {
-    project_type:         'book',
-
-  }
-]
-
-Project.create!(projects_attributes)
+user = User.create(email: "approximatif@hotmail.com", password: "bitch", password_confirmation: "bitch")
 
 
