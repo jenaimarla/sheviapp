@@ -3,6 +3,7 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .theme-container {
+  position: relative;
   display: flex;
   border-style: solid;
   border-width: 1px;
@@ -36,8 +37,10 @@
 .theme-info1 {
   padding: 5px;
   h1 {
-    font-size: 15px;
     text-align: left;
+  }
+  a{
+    color: black;
   }
 }
 
@@ -45,7 +48,6 @@
   padding: 5px;
   margin-top: 400px;
   h1 {
-    font-size: 15px;
     text-align: left;
   }
 }

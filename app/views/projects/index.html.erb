@@ -1,20 +1,30 @@
 
-<ul>
-  <% @projects.each do |project| %>
-    <li><%= link_to project.project_type, project_path(project)  %>
+<div class="project-container">
+  <h1>coming soon</h1>
+ <!--  <% @projects.each do |project| %>
+  <div class="p3-container">
+      <div class="project-1">
        <%= cl_image_tag project.impression.key, height: 300, width: 400, crop: :fill %>
+      </div>
+      <div class="project-title">
+      <%= link_to project.project_type, project_path(project)  %>
+      </div>
 
-
-    </li>
-    <%= link_to 'edit', edit_project_path(project)  %>
-    <%= link_to 'delete', project_path(project),
-                  method: :delete,
-                  data: { confirm: "Are you sure?" } %>
-  <% end %>
-</ul>
+      <div class="project-options">
+        <%= link_to 'edit', edit_project_path(project)  %>
+        <%= link_to 'delete', project_path(project),
+                      method: :delete,
+                      data: { confirm: "Are you sure?" } %>
+    </div>
+  </div>
+  <% end %> -->
+</div>
 
 
 <div class="options">
 <%= link_to 'add new project', new_project_path %>
 <%= link_to 'home', root_path  %>
 </div>
+
+
+
