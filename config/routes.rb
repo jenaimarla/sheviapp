@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   get 'shop', to: 'pages#shop'
   get 'profile', to: 'pages#profile'
 
+
   # get "photos", to: "photos#index"
   # get "photos/new", to: "photos#new", as: :new_photo
   # post "photos", to: "photos#create"
@@ -31,6 +32,8 @@ Rails.application.routes.draw do
   end
 
   resources :libraries, only: [ :show, :edit, :update, :destroy ]
+
+  resources :charges
 
 end
 
