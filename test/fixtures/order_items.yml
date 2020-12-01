@@ -1,9 +1,13 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
+  quantity: 1
   image: one
+  order: one
   theme: one
 
 two:
+  quantity: 1
   image: two
+  order: two
   theme: two

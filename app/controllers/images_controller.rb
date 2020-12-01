@@ -10,7 +10,6 @@ class ImagesController < ApplicationController
 
 
   def new
-    # we need @restaurant in our `simple_form_for`
     @photo = Photo.find(params[:photo_id])
     @image = Image.new
   end
@@ -18,7 +17,6 @@ class ImagesController < ApplicationController
 
   def create
     @image = Image.new(image_params)
-    # we need `restaurant_id` to associate review with corresponding restaurant
     @photo = Photo.find(params[:photo_id])
     @image.photo = @photo
     @image.save
@@ -45,10 +43,9 @@ class ImagesController < ApplicationController
     end
 
 
-
   private
 
   def image_params
-    params.require(:image).permit(:name, :information, :image)
+    params.require(:image).permit(:name, :information, :pre_order, :price_a1, :price_a2, :image)
   end
 end

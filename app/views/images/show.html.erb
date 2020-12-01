@@ -5,11 +5,21 @@
 
   <div class="image-info">
     <div class="image-info1">
-    <h1><%= link_to @image.photo.category , photo_path%></h1>
+    <h1><%= link_to @image.photo.category  %></h1>
     <h1> <%= @image.name %></h1>
     </div>
     <div class="image-other">
-    <h1> <%= @image.information %> </h1>
+      <h1> <%= @image.information %> </h1>
+        <% if @image.pre_order=='yes' %>
+          <h1>PRE ORDER</h1>
+
+
+        <h1>A1 - <%= @image.price_a1 %>€</h1>
+        <h1>A2 - <%= @image.price_a2 %>€</h1>
+
+        <% else %>
+          <h1>No pre-order</h1>
+        <% end %>
     </div>
   </div>
 </div>

@@ -1,0 +1,22 @@
+.shop-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 0px;
+  width:50%;
+  margin: auto;
+  margin-top: -130px;
+  background-color: #9d9d9c;
+  border-style: solid;
+  border-width: 1px;
+}
+.shop-photos, .shop-posters {
+
+  margin: auto;
+  // margin-top: 50px;
+  a {
+    text-decoration: none;
+    color: black;
+  }
+
+
+}

@@ -5,4 +5,14 @@ class PagesController < ApplicationController
 
   def home
   end
+
+  def shop
+    @images = Image.all
+    @themes = Theme.all
+  end
+
+
 end
+
+
+

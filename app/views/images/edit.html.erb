@@ -1,6 +1,9 @@
 <%= simple_form_for [ @image ] do |f| %>
   <%= f.input :name %>
   <%= f.input :information %>
+  <%= f.input :pre_order %>
+  <%= f.input :price_a1 %>
+  <%= f.input :price_a2 %>
   <%= f.input :image, as: :file %>
   <%= f.submit "Save changes", class: "btn btn-primary" %>
 <% end %>

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_11_30_142901) do
+ActiveRecord::Schema.define(version: 2020_12_01_150220) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -42,6 +42,9 @@ ActiveRecord::Schema.define(version: 2020_11_30_142901) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "information"
+    t.string "pre_order"
+    t.integer "price_a1"
+    t.integer "price_a2"
     t.index ["photo_id"], name: "index_images_on_photo_id"
   end
 
@@ -86,11 +89,12 @@ ActiveRecord::Schema.define(version: 2020_11_30_142901) do
   end
 
   create_table "shops", force: :cascade do |t|
-    t.string "shopify_domain", null: false
-    t.string "shopify_token", null: false
+    t.bigint "image_id"
+    t.bigint "theme_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["shopify_domain"], name: "index_shops_on_shopify_domain", unique: true
+    t.index ["image_id"], name: "index_shops_on_image_id"
+    t.index ["theme_id"], name: "index_shops_on_theme_id"
   end
 
   create_table "themes", force: :cascade do |t|
@@ -100,6 +104,9 @@ ActiveRecord::Schema.define(version: 2020_11_30_142901) do
     t.datetime "updated_at", null: false
     t.string "title"
     t.string "information"
+    t.string "pre_order"
+    t.integer "price_a1"
+    t.integer "price_a2"
     t.index ["poster_id"], name: "index_themes_on_poster_id"
   end
 
@@ -119,5 +126,7 @@ ActiveRecord::Schema.define(version: 2020_11_30_142901) do
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "images", "photos"
   add_foreign_key "libraries", "projects"
+  add_foreign_key "shops", "images"
+  add_foreign_key "shops", "themes"
   add_foreign_key "themes", "posters"
 end
