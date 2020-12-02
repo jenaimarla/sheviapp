@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_12_01_150220) do
+ActiveRecord::Schema.define(version: 2020_12_02_134323) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -36,6 +36,12 @@ ActiveRecord::Schema.define(version: 2020_12_01_150220) do
     t.index ["key"], name: "index_active_storage_blobs_on_key", unique: true
   end
 
+  create_table "carts", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.boolean "payed"
+  end
+
   create_table "images", force: :cascade do |t|
     t.string "name"
     t.bigint "photo_id"
@@ -46,6 +52,18 @@ ActiveRecord::Schema.define(version: 2020_12_01_150220) do
     t.integer "price_a1"
     t.integer "price_a2"
     t.index ["photo_id"], name: "index_images_on_photo_id"
+  end
+
+  create_table "items", force: :cascade do |t|
+    t.integer "quantity"
+    t.bigint "image_id"
+    t.bigint "theme_id"
+    t.bigint "cart_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["cart_id"], name: "index_items_on_cart_id"
+    t.index ["image_id"], name: "index_items_on_image_id"
+    t.index ["theme_id"], name: "index_items_on_theme_id"
   end
 
   create_table "libraries", force: :cascade do |t|
@@ -125,6 +143,9 @@ ActiveRecord::Schema.define(version: 2020_12_01_150220) do
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "images", "photos"
+  add_foreign_key "items", "carts"
+  add_foreign_key "items", "images"
+  add_foreign_key "items", "themes"
   add_foreign_key "libraries", "projects"
   add_foreign_key "shops", "images"
   add_foreign_key "shops", "themes"

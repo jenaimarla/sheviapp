@@ -8,6 +8,14 @@
     <div class="theme-info1">
     <h1><%= link_to @theme.title , poster_path%></h1>
     <h1> <%= @theme.description %></h1>
+       <% if current_user %>
+
+        <%= link_to 'Edit', edit_theme_path(@theme) %>
+        <%= link_to 'Delete image', theme_path(@theme),
+                      method: :delete,
+                      data: { confirm: "Are you sure?" } %>
+
+      <%end %>
     </div>
     <div class="theme-other">
     <h1> <%= @theme.information %> </h1>

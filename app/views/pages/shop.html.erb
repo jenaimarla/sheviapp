@@ -11,18 +11,20 @@
         <h1><%= link_to image.name%>
         <br> A1 <%= image.price_a1 %>
         <br> A2 <%= image.price_a2 %> </h1>
+
         </div>
       <% end %>
     </div>
     <%end %>
 
 
+
   <% @themes.each do |theme| %>
     <div class="shop-posters">
       <h1><% if theme.pre_order=='yes' %>
         <div class="shop-poster">
-      <%= cl_image_tag theme.illustration.key, height: 250, width: 200%>
-    </div>
+          <%= cl_image_tag theme.illustration.key, height: 250, width: 200%>
+        </div>
     <div class="shop-photoinfo">
       <%= theme.title %>
       <br> A1 <%= theme.price_a1 %>
@@ -39,9 +41,6 @@
 
 
 <div class="options">
-   <% if current_user %>
-  <%= link_to 'add new photo category', new_photo_path %>
-  <% end %>
   <%= link_to 'home', root_path  %>
 </div>
 

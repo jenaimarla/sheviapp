@@ -7,6 +7,7 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
   </head>
 
   <body>
@@ -15,14 +16,14 @@
 
   <div class="menu-1">
     <div class="logo">
-      <%= render partial: "shared/svgs/logo"%>
+      <%= link_to render(:partial => "shared/svgs/logo"), root_path %>
     </div>
   </div>
 
   <div class="menu-2">
 
-    <div class="bio">
-      <h1>approximatif - shevi shenaj</h1>
+    <div class="main slide-right">
+      <p>APPROXIMATIF - SHEVI SHENAJ</p>
     </div>
 
     <div class="links">
@@ -53,10 +54,14 @@
 </div>
  <%= yield %>
 
+
 <footer>
   <%= link_to 'about', about_path  %>
   <a href="">e-mail</a>
   <a href="">instagram</a>
 </footer>
   </body>
+
+
 </html>
+

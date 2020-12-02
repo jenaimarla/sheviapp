@@ -68,3 +68,4 @@ gem 'cloudinary', '~> 1.16.0'
 gem 'devise'
 
 gem 'stripe'
+gem 'jquery-rails'

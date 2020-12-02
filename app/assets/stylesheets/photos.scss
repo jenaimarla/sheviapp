@@ -10,8 +10,8 @@
   margin: auto;
   margin-top: -130px;
   background-color: #9d9d9c;
-  border-style: solid;
-  border-width: 1px;
+  border-top: 1px solid black;
+  border-left: 1px solid black;
 }
 
 .photo-desciption {
@@ -34,13 +34,15 @@
   margin: auto;
   margin-top: -90px;
   background-color: #9d9d9c;
-  border-style: solid;
-  border-width: 1px;
+  border-top: 1px solid black;
+  border-left: 1px solid black;
 }
 
 .p-container {
-  margin: auto;
-  margin-top: 50px;
+  // margin: auto;
+  // margin-top: 50px;
+  border-bottom: 1px solid black;
+  border-right: 1px solid black;
   a {
     text-decoration: none;
     color: black;
@@ -65,9 +67,22 @@
   }
 }
 
+
+.photo-show {
+  img {
+    margin-left: 30px;
+  }
+}
+
+.photo-1 {
+  img {
+    margin-left: 70px;
+  }
+}
+
 .photo-title , .photo-options{
   text-align: right;
-  margin-top: 10px;
+  margin: 10px;
 }
 
 .photo-options {

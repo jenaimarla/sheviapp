@@ -10,11 +10,12 @@
     </div>
     <div class="image-other">
       <h1> <%= @image.information %> </h1>
+
         <% if @image.pre_order=='yes' %>
           <h1>PRE ORDER</h1>
 
-
         <h1>A1 - <%= @image.price_a1 %>€</h1>
+
         <h1>A2 - <%= @image.price_a2 %>€</h1>
 
         <% else %>

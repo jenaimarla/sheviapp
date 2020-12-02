@@ -19,13 +19,17 @@ Rails.application.routes.draw do
     resources :images, only: [ :index, :new, :create ]
   end
 
-  resources :images, only: [ :show, :edit, :update, :destroy ]
+  resources :images, only: [ :show, :edit, :update, :destroy ] do
+    resources :items, only: [:create]
+  end
 
   resources :posters do
     resources :themes, only: [:index, :new, :create ]
   end
 
-  resources :themes, only: [ :show, :edit, :update, :destroy ]
+  resources :themes, only: [ :show, :edit, :update, :destroy ] do
+    resources :items, only: [:create]
+  end
 
   resources :projects do
     resources :libraries, only: [:index, :new, :create ]
@@ -35,6 +39,14 @@ Rails.application.routes.draw do
 
   # resources :shops
   resources :charges
+
+  resources :items, only: [:destroy]
+
+  resources :carts, only: [:show] do
+    collection do
+      get "orders"
+    end
+  end
 
 end
 
