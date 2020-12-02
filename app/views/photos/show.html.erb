@@ -9,7 +9,7 @@
  <% @photo.images.each do |image| %>
  <div class="p-container">
   <div class="photo-show">
-    <%= cl_image_tag image.image.key, height: 250, width: 200%>
+    <%= link_to cl_image_tag(image.image.key, height: 250, width: 200), image_path(image)%>
   </div>
     <div class="photo-title">
     <%= link_to image.name, image_path(image) %>

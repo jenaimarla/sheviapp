@@ -4,11 +4,11 @@
       <% @photos.each do |photo| %>
       <div class="p-container">
         <div class="photo-1">
-        <%= cl_image_tag photo.photo.key, height: 200, width: 250 %>
-      </div>
-      <div class="photo-title">
-        <%= link_to photo.category, photo_path(photo) %>
-      </div>
+          <%= link_to cl_image_tag(photo.photo.key, height: 200, width: 250),  photo_path(photo)%>
+        </div>
+        <div class="photo-title">
+          <%= link_to photo.category, photo_path(photo) %>
+        </div>
 
       <% if current_user %>
 
