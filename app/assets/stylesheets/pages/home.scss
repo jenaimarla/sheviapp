@@ -79,23 +79,28 @@ html {
 }
 
 .p-box1 {
-  height: 90%;
+  height: 95%;
 }
 
 .p-box2 {
+  height: 5%;
+  a {
+    float: right;
+  }
+}
+
+
+.p-box3 {
+  height: 90%;
+}
+
+.p-box4 {
   height: 10%;
   a {
     float: right;
   }
 }
 
-// .p1-box {
-//    a {
-//     position: relative;
-//     float: right;
-//     margin-top: -42px;
-//   }
-// }
 
 // faire bouger le titre autour de la case
 .p2-box {
