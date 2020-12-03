@@ -75,22 +75,27 @@ html {
 
 .photo-box {
   width: 50%;
+
+}
+
+.p-box1 {
+  height: 90%;
+}
+
+.p-box2 {
+  height: 10%;
   a {
-    position: relative;
     float: right;
-    margin-top: 169px;
   }
 }
 
-
-
-.p1-box {
-   a {
-    position: relative;
-    float: right;
-    margin-top: -42px;
-  }
-}
+// .p1-box {
+//    a {
+//     position: relative;
+//     float: right;
+//     margin-top: -42px;
+//   }
+// }
 
 // faire bouger le titre autour de la case
 .p2-box {
