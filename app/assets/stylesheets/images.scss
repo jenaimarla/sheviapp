@@ -30,6 +30,9 @@
   width: 15%;
   border-left-style: solid;
   border-left-width: 1px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 
 }
 
@@ -45,8 +48,14 @@
 
 .image-other {
   padding: 5px;
-  margin-top: 450px;
   h1 {
     text-align: left;
   }
+}
+
+// forms
+
+#edit_image_1.simple_form.edit_image,#new_image.simple_form.new_image {
+  margin-top: 50px;
+  margin-left: 30%;
 }

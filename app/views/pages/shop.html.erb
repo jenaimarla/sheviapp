@@ -8,9 +8,9 @@
         <%= cl_image_tag image.image.key, height: 250, width: 200%>
       </div>
       <div class="shop-photoinfo">
-        <h1><%= link_to image.name%>
-        <br> A1 <%= image.price_a1 %>
-        <br> A2 <%= image.price_a2 %> </h1>
+        <h1>
+        <br> A1 / <%= image.price_a1 %> €
+        <br> A2 / <%= image.price_a2 %> € </h1>
 
         </div>
       <% end %>
@@ -26,9 +26,9 @@
           <%= cl_image_tag theme.illustration.key, height: 250, width: 200%>
         </div>
     <div class="shop-photoinfo">
-      <%= theme.title %>
-      <br> A1 <%= theme.price_a1 %>
-      <br> A2 <%= theme.price_a2 %></h1>
+      <h1>
+      <br> A1 / <%= theme.price_a1 %> €
+      <br> A2 / <%= theme.price_a2 %> €</h1>
     </div>
       <% end %>
     </div>
@@ -38,9 +38,4 @@
 </div>
 
 
-
-
-<div class="options">
-  <%= link_to 'home', root_path  %>
-</div>
 

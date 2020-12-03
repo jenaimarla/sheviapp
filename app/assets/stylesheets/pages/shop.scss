@@ -22,10 +22,12 @@
 
 .shop-photo, .shop-poster {
   img {
+    margin-top: 30px;
     margin-left: 65px;
   }
 }
 
 .shop-photoinfo {
-  text-align: center;
+  text-align: left;
+  padding-left: 10px;
 }

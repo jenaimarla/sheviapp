@@ -1,9 +1,8 @@
-<div>
+<div class="form-poster">
   <h1>Add a new category</h1>
+  <%= render 'form', poster: @poster %>
 </div>
 
-
-<%= render 'form', poster: @poster %>
-
-<%= link_to "Back", root_path, class:'btn btn-primary'%>
-
+<div class="options">
+  <%= link_to "Back", root_path, class:'btn btn-primary'%>
+</div>

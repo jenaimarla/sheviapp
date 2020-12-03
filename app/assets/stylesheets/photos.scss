@@ -67,9 +67,9 @@
   }
 }
 
-
 .photo-show {
   img {
+    margin-top: 30px;
     margin-left: 30px;
   }
 }
@@ -91,4 +91,27 @@
     text-decoration: underline;
   }
 }
+
+// forms
+
+.form-photo {
+  width:50%;
+  height: 300px;
+  margin: auto;
+  margin-top: -130px;
+  background-color: #9d9d9c;
+  border-style: solid;
+  border-width: 1px;
+  h1 {
+    text-align: center;
+    text-decoration: underline;
+  }
+}
+
+#new_photo.simple_form.new_photo, #edit_photo_1.simple_form.edit_photo {
+  margin-top: 50px;
+  margin-left: 30%;
+}
+
+
 

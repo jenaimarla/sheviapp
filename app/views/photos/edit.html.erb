@@ -1,5 +1,10 @@
-<h1>Edit category/h1>
 
-<%= render "form", photo: @photo%>
+<div class="form-photo">
+  <h1>Edit category</h1>
 
-<%= link_to "Back", root_path , class:'btn btn-primary'%>
+  <%= render "form", photo: @photo%>
+</div>
+
+<div class="options">
+  <%= link_to "Back", root_path , class:'btn btn-primary'%>
+</div>

@@ -1,8 +1,9 @@
-<div>
+<div class="form-photo">
   <h1>Add a new category</h1>
+
+  <%= render 'form', photo: @photo %>
 </div>
 
-
-<%= render 'form', photo: @photo %>
-
-<%= link_to "Back", root_path, class:'btn btn-primary'%>
+<div class="options">
+  <%= link_to "Back", root_path, class:'btn btn-primary'%>
+</div>

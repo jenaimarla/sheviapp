@@ -1,5 +1,10 @@
-<h1>Edit category/h1>
 
-<%= render "form", poster: @poster%>
+<div class="form-poster">
+  <h1>Edit category</h1>
 
-<%= link_to "Back", root_path , class:'btn btn-primary'%>
+  <%= render "form", poster: @poster%>
+</div>
+
+<div class="options">
+  <%= link_to "Back", root_path , class:'btn btn-primary'%>
+</div>
