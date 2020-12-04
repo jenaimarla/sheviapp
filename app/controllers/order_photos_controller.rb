@@ -51,7 +51,7 @@ class OrderPhotosController < ApplicationController
   private
 
   def order_photos_params
-    params.require(:order_photo).permit(:quantity, :formats)
+    params.require(:order_photo).permit(:quantity)
   end
 
 

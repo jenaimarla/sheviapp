@@ -7,9 +7,9 @@ class Cart < ApplicationRecord
     total = 0
     self.order_photos.each do |order_photo|
       next if order_photo.quantity.nil?
-      if order_photo.formats == 'A1'
+      if order_photo.image.format1 == 'A1'
         total += order_photo.quantity * order_photo.image.price_a1
-      else order_photo.formats == 'A2'
+      else
         total += order_photo.quantity * order_photo.image.price_a2
       end
     end

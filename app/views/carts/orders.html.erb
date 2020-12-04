@@ -7,7 +7,7 @@
   <div class="card-product-infos">
               <p><strong><%= order_photo.image.name%></strong> - <%= order_photo.image.information%>
               <span><p>
-                <% if order_photo.formats == 'A1' %>
+                <% if order_photo.image.format1 == 'A1' %>
                   Price : <%= order_photo.image.price_a1%> EUR
                   <%else %>
                     Price : <%= order_photo.image.price_a2 %> EUR
