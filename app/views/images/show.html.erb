@@ -14,15 +14,16 @@
         <% if @image.pre_order=='yes' %>
           <h1>PRE ORDER</h1>
 
-          <h1> <%= @image.format1 %> / <%= @image.price_a1 %>€</h1>
-          <h1> <%= @image.format2 %> / <%= @image.price_a2 %>€</h1>
-
-
-          <%= simple_form_for [@image, @order_photo] do |f| %>
+          <h1>A1 / <%= @image.price_a1 %>€
+            <%= simple_form_for [@image, @order_photo] do |f| %>
             <%= f.input :quantity, placeholder: '1', input_html: { value: '1', min: '1', step: 'any' } %>
             <%= f.submit "Add to card", class: 'btn-primary' %>
-          <% end %>
-
+          <% end %></h1>
+          <h1>A2 / <%= @image.price_a2 %>€
+            <%= simple_form_for [@image, @order_photo] do |f| %>
+        <%= f.input :quantity, placeholder: '1', input_html: { value: '1', min: '1', step: 'any' } %>
+        <%= f.submit "Add to card", class: 'btn-primary' %>
+      <% end %></h1>
         <% else %>
           <h1>No pre-order</h1>
         <% end %>
