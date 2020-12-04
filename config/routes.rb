@@ -20,7 +20,7 @@ Rails.application.routes.draw do
   end
 
   resources :images, only: [ :show, :edit, :update, :destroy ] do
-    resources :items, only: [:create]
+    resources :order_photos, only: [:create]
   end
 
   resources :posters do
@@ -28,7 +28,7 @@ Rails.application.routes.draw do
   end
 
   resources :themes, only: [ :show, :edit, :update, :destroy ] do
-    resources :items, only: [:create]
+    resources :order_posters, only: [:create]
   end
 
   resources :projects do
@@ -40,7 +40,8 @@ Rails.application.routes.draw do
   # resources :shops
   resources :charges
 
-  resources :items, only: [:destroy]
+  resources :order_photos, only: [:destroy]
+  resources :order_posters, only: [:destroy]
 
   resources :carts, only: [:show] do
     collection do

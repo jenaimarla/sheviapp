@@ -14,7 +14,7 @@ class ItemsController < ApplicationController
 
   def create
     #creer un panier si payed true
-    @cart = current_cart
+    @cart = @current_cart
     if @cart.nil?
       @cart = Cart.create
     end
@@ -26,6 +26,7 @@ class ItemsController < ApplicationController
     @item.cart = @cart
     if @item.save
       redirect_to @image
+      redirect_to @theme
     else
       render :new
     end

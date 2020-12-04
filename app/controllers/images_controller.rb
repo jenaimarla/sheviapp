@@ -6,6 +6,7 @@ class ImagesController < ApplicationController
 
   def show
     @image = Image.find(params[:id])
+    @order_photo = OrderPhoto.new
   end
 
 
@@ -46,6 +47,6 @@ class ImagesController < ApplicationController
   private
 
   def image_params
-    params.require(:image).permit(:name, :information, :pre_order, :price_a1, :price_a2, :image)
+    params.require(:image).permit(:name, :information, :pre_order, :format1, :format2, :price_a1, :price_a2, :image)
   end
 end

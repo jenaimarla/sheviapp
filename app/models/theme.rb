@@ -1,6 +1,6 @@
 class Theme < ApplicationRecord
   belongs_to :poster
-  has_many :items
+  has_many :order_posters
   has_one_attached :illustration
 
   validates :title, presence: true

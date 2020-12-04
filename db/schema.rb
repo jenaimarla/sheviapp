@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_12_02_134323) do
+ActiveRecord::Schema.define(version: 2020_12_04_160259) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -39,7 +39,7 @@ ActiveRecord::Schema.define(version: 2020_12_02_134323) do
   create_table "carts", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.boolean "payed"
+    t.boolean "payed", default: false
   end
 
   create_table "images", force: :cascade do |t|
@@ -51,6 +51,8 @@ ActiveRecord::Schema.define(version: 2020_12_02_134323) do
     t.string "pre_order"
     t.integer "price_a1"
     t.integer "price_a2"
+    t.string "format1"
+    t.string "format2"
     t.index ["photo_id"], name: "index_images_on_photo_id"
   end
 
@@ -84,6 +86,27 @@ ActiveRecord::Schema.define(version: 2020_12_02_134323) do
     t.datetime "updated_at", null: false
     t.index ["email"], name: "index_models_on_email", unique: true
     t.index ["reset_password_token"], name: "index_models_on_reset_password_token", unique: true
+  end
+
+  create_table "order_photos", force: :cascade do |t|
+    t.integer "quantity"
+    t.bigint "image_id"
+    t.bigint "cart_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.text "formats"
+    t.index ["cart_id"], name: "index_order_photos_on_cart_id"
+    t.index ["image_id"], name: "index_order_photos_on_image_id"
+  end
+
+  create_table "order_posters", force: :cascade do |t|
+    t.integer "quantity"
+    t.bigint "theme_id"
+    t.bigint "cart_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["cart_id"], name: "index_order_posters_on_cart_id"
+    t.index ["theme_id"], name: "index_order_posters_on_theme_id"
   end
 
   create_table "photos", force: :cascade do |t|
@@ -147,6 +170,10 @@ ActiveRecord::Schema.define(version: 2020_12_02_134323) do
   add_foreign_key "items", "images"
   add_foreign_key "items", "themes"
   add_foreign_key "libraries", "projects"
+  add_foreign_key "order_photos", "carts"
+  add_foreign_key "order_photos", "images"
+  add_foreign_key "order_posters", "carts"
+  add_foreign_key "order_posters", "themes"
   add_foreign_key "shops", "images"
   add_foreign_key "shops", "themes"
   add_foreign_key "themes", "posters"

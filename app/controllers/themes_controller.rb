@@ -6,6 +6,7 @@ class ThemesController < ApplicationController
 
   def show
     @theme = Theme.find(params[:id])
+     @order_poster = OrderPoster.new
   end
 
   def new
