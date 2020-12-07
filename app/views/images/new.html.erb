@@ -7,10 +7,8 @@
   <%= f.input :name %>
   <%= f.input :information %>
   <%= f.input :pre_order %>
-  <%= f.input :format1 %>
-    <%= f.input :format2 %>
+  <%= f.input :format %>
   <%= f.input :price_a1, input_html: { min: '1', step: 'any' } %>
-  <%= f.input :price_a2, input_html: { min: '1', step: 'any' }%>
    <%= f.input :image, as: :file %>
   <%= f.submit "Submit image", class: "btn btn-primary" %>
 <% end %>

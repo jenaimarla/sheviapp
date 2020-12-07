@@ -7,6 +7,21 @@ html {
   }
 }
 
+.caddy {
+  background-color: #9d9d9c;
+  border-radius: 50px;
+  // border-style: solid;
+  // border-width: 1px;
+  position: relative;
+  text-align: right;
+  padding-right: 10px;
+  margin-top: 5px;
+  a {
+    text-decoration: none;
+    color: black;
+  }
+}
+
 .menu {
   display: flex;
   justify-content: space-between;
@@ -238,3 +253,60 @@ div.slide-left p {
 @keyframes slide-left { from {margin-left: 0%;width: 100%;}
  to {margin-left: -100%;width: 300%;} }
 
+@media only screen
+and (min-device-width : 320px)
+and (max-device-width : 568px)
+{
+
+ .menu {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+  margin: 150px auto;
+}
+
+.box-home {
+    width: 100%;
+    margin-top: -130px;
+}
+
+.photo-box {
+    width: 100%;
+}
+
+.p-box {
+    width: 100%;
+}
+
+.p2-box {
+  height:35.08vh;
+}
+
+.p-box1 {
+  height:98%;
+}
+
+.p-box2 {
+  height: 2%;
+}
+
+.p-box3 {
+  height: 95%;
+}
+
+.p-box4 {
+  height: 5%;
+}
+
+footer {
+    display: flex;
+    margin: 10px auto;
+    bottom: 0;
+    width: 100%;
+    a {
+      width: 100%;
+    }
+  }
+
+}

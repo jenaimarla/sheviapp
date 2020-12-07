@@ -29,11 +29,11 @@ function change_title() {
 };
 
 function change_left() {
-    $('div').removeClass('slide-right').addClass('slide-left');
+    $('.main').removeClass('slide-right').addClass('slide-left');
 }
 
 function change_right() {
-    $('div').removeClass('slide-left').addClass('slide-right');
+    $('.main').removeClass('slide-left').addClass('slide-right');
     change_title();
 }
 

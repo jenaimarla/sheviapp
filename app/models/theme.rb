@@ -7,6 +7,6 @@ class Theme < ApplicationRecord
   validates :description, presence: true
   validates :information, presence: true
   validates :pre_order, presence: true
+  validates :format, presence: true
   validates :price_a1, presence: true
-  validates :price_a2, presence: true
 end

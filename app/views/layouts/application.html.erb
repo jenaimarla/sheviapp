@@ -4,68 +4,20 @@
     <title>Sheviapp</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-
+    <script src="https://js.stripe.com/v3/"></script>
   </head>
 
   <body>
-    <div class="panier">
-    <div class="caddy">
-    <%= link_to '🛒',orders_carts_path, class:"fa" %>
-    </div>
+    <%= render 'shared/navbar' %>
+    <%= yield %>
 
-    </div>
-
-    <div class="menu">
-
-  <div class="menu-1">
-    <div class="logo">
-      <%= link_to render(:partial => "shared/svgs/logo"), root_path %>
-    </div>
-  </div>
-
-  <div class="menu-2">
-
-    <div class="main slide-right">
-      <p>APPROXIMATIF - SHEVI SHENAJ</p>
-    </div>
-
-    <div class="links">
-
-      <div class="links1">
-        <div class="photo-link">
-          <%= link_to 'photo', photos_path %>
-        </div>
-
-        <div class="poster-link">
-          <%= link_to 'poster', posters_path  %>
-        </div>
-      </div>
-
-      <div class="links2">
-        <div class="project-link">
-          <%= link_to 'project', projects_path %>
-        </div>
-
-        <div class="shop-link">
-          <%= link_to 'shop', shop_path %>
-        </div>
-      </div>
-    </div>
-
-  </div>
-
-</div>
- <%= yield %>
-
-
-<footer>
-  <%= link_to 'about', about_path  %>
-  <a href="">e-mail</a>
-  <a href="">instagram</a>
-</footer>
+    <footer>
+      <%= link_to 'about', about_path  %>
+      <a href="">e-mail</a>
+      <a href="">instagram</a>
+    </footer>
   </body>
 
 

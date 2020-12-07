@@ -1,50 +1,40 @@
-<div class="wrap">
+
   <div class="wrap2">
 
-<% @orders.each do |order|%>
-  <% order.order_photos.each do |order_photo| %>
-<div class="card-product">
-  <div class="card-product-infos">
-              <p><strong><%= order_photo.image.name%></strong> - <%= order_photo.image.information%>
-              <span><p>
-                <% if order_photo.image.format1 == 'A1' %>
-                  Price : <%= order_photo.image.price_a1%> EUR
-                  <%else %>
-                    Price : <%= order_photo.image.price_a2 %> EUR
-                    <% end %>
-                  </p></span>
-              <span><p>Total quantity : <%= order_photo.quantity %> </p></span>
-              <%= link_to "❌", order_photo_path(order_photo),
-                        method: :delete,
-                        data: { confirm: "Are you sure?" } %></p>
-  </div>
-</div>
+    <% @orders.each do |order|%>
+      <% order.order_photos.each do |order_photo| %>
+      <div class="card-product">
+                    <span><p>i want <%= order_photo.quantity %> <%= order_photo.image.name%> printed</p></span>
+                    <span><p><%= order_photo.image.information%></p></span>
+                    <span><p> total <%= order_photo.image.price_a1%> EUR </p></span>
+                    <%= link_to "remove from card", order_photo_path(order_photo),
+                              method: :delete,
+                              data: { confirm: "Are you sure?" } %></p>
+      </div>
           <% end %>
     <% end %>
+
 
     <% @orders.each do |order|%>
-  <% order.order_posters.each do |order_poster| %>
-<div class="card-product">
-  <div class="card-product-infos">
-              <p><strong><%= order_poster.theme.title%></strong> - <%= order_poster.theme.information%>
-              <span><p>Price : <%= order_poster.theme.price_a1 || order_poster.theme.price_a2 %> EUR || </p></span>
-              <span><p>Total quantity : <%= order_poster.quantity %> </p></span>
-              <%= link_to "❌", order_poster_path(order_poster),
-                        method: :delete,
-                        data: { confirm: "Are you sure?" } %></p>
-  </div>
-</div>
+      <% order.order_posters.each do |order_poster| %>
+      <div class="card-product">
+                    <span><p> i want <%= order_poster.quantity %> <%= order_poster.theme.title%> printed</p></span>
+                    <span><p><%= order_poster.theme.information%></p></span>
+                    <span><p>total <%= order_poster.theme.price_a1 %> EUR  </p></span>
+                    <%= link_to "remove from card", order_poster_path(order_poster),
+                              method: :delete,
+                              data: { confirm: "Are you sure?" } %></p>
+      </div>
           <% end %>
     <% end %>
+
 </div>
 
 
 
-
-
-
-<div class="boxx">
-  Total to pay: <%= @total_orders %> EUR
-  <%= link_to "Checkout", root_path, class:'btn btn-primary'%>
+<div class="box">
+  <p>TOTAL <%= @total_orders %> EUR </p>
+  <span><p><%= link_to "checkout", charges_new_path, class:'btn btn-primary'%></p></span>
 </div>
-</div>
+
+

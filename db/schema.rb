@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_12_04_160259) do
+ActiveRecord::Schema.define(version: 2020_12_07_161059) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -53,6 +53,7 @@ ActiveRecord::Schema.define(version: 2020_12_04_160259) do
     t.integer "price_a2"
     t.string "format1"
     t.string "format2"
+    t.string "format"
     t.index ["photo_id"], name: "index_images_on_photo_id"
   end
 
@@ -120,6 +121,7 @@ ActiveRecord::Schema.define(version: 2020_12_04_160259) do
     t.string "title"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "format"
   end
 
   create_table "projects", force: :cascade do |t|
@@ -148,6 +150,7 @@ ActiveRecord::Schema.define(version: 2020_12_04_160259) do
     t.string "pre_order"
     t.integer "price_a1"
     t.integer "price_a2"
+    t.string "format"
     t.index ["poster_id"], name: "index_themes_on_poster_id"
   end
 
