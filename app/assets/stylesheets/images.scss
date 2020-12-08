@@ -32,7 +32,7 @@
   border-left-width: 1px;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-between;
 
 }
 
@@ -83,6 +83,7 @@
     border-width: 1px;
     height: 25%;
       width: 100%;
+      justify-content: space-around;
 
   }
 
@@ -120,6 +121,7 @@
     border-width: 1px;
     height: 25%;
       width: 100%;
+      justify-content: space-around;
 
   }
 
@@ -157,6 +159,7 @@ and (-webkit-min-device-pixel-ratio: 2)
     border-width: 1px;
     height: 25%;
       width: 100%;
+      justify-content: space-around;
   }
 
   .image-other {
@@ -204,6 +207,7 @@ and (-webkit-min-device-pixel-ratio: 2)
   border-width: 1px;
   height: 15%;
   width: 100%;
+  justify-content: space-around;
 }
 
 }
