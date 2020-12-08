@@ -83,17 +83,18 @@ and (max-device-width : 568px)
 
 .theme-box {
     width: 100%;
-    margin-top: 150px;
+    margin-top: 50px;
     margin-bottom: 50px;
     img {
         width: 90%;
-        height: 90%;
+        height: 100%;
         margin: 45px;
     }
 }
 
 .theme-info {
     width: 100%;
+    margin-top: 100px;
     margin-left: 0px;
     display: flex;
     flex-direction: column;
