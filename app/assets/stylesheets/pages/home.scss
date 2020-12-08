@@ -639,7 +639,7 @@ footer {
 {
 
 
-html {
+html, body {
   a, h1, p {
     font-family: Helvetica;
     font-weight: lighter;
@@ -671,9 +671,6 @@ html {
 
 .links1, .links2 {
   width: 100%;
-  a {
-    font-size: 20px;
-  }
 }
 
 .photo-link, .poster-link, .project-link, .shop-link {
