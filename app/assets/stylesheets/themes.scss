@@ -86,9 +86,8 @@
 }
 
 .theme-info {
-    height: 20%;
+    // height: 20%;
     width: 100%;
-    // margin-top: 100px;
     margin-left: 0px;
     display: flex;
     flex-direction: row;
@@ -102,12 +101,6 @@
    }
 }
 
-.theme-other {
-  // margin: auto;
-  // h1 {
-  //   text-align: center;
-  //  }
-}
 }
 
 @media only screen
@@ -133,9 +126,8 @@
 }
 
 .theme-info {
-    height: 20%;
+    // height: 20%;
     width: 100%;
-    // margin-top: 100px;
     margin-left: 0px;
     display: flex;
     flex-direction: row;
@@ -147,13 +139,6 @@
   h1 {
     text-align: left;
    }
-}
-
-.theme-other {
-  // margin: auto;
-  // h1 {
-  //   text-align: center;
-  //  }
 }
 
 
@@ -182,9 +167,8 @@ and (-webkit-min-device-pixel-ratio: 2)
 }
 
 .theme-info {
-    height: 20%;
+    // height: 20%;
     width: 100%;
-    // margin-top: 100px;
     margin-left: 0px;
     display: flex;
     flex-direction: row;
@@ -198,12 +182,6 @@ and (-webkit-min-device-pixel-ratio: 2)
    }
 }
 
-.theme-other {
-  // margin: auto;
-  // h1 {
-  //   text-align: center;
-  //  }
-}
 
 
 
@@ -250,12 +228,6 @@ and (-webkit-min-device-pixel-ratio: 2)
    }
 }
 
-.theme-other {
-  // margin: 100px auto;
-  // h1 {
-  //   text-align: center;
-  //  }
-}
 
 
 }
