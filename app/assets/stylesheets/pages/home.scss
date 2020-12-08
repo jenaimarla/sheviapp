@@ -641,7 +641,13 @@ and (max-device-width : 568px)
 {
 
 
-
+html {
+  a, h1, p {
+    font-family: Helvetica;
+    font-weight: lighter;
+    font-size: 20px;
+  }
+}
 
  .menu {
   display: flex;
