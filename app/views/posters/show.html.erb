@@ -2,12 +2,10 @@
 <div class="poster-container2">
  <% @poster.themes.each do |theme| %>
  <div class="p3-container">
-  <div class="poster-2">
+
       <%= link_to cl_image_tag(theme.illustration.key), theme_path(theme) %>
-    </div>
-<!--  <div class="poster-title">
-    <%= link_to theme.description, theme_path(theme) %>
-    </div> -->
+
+
 
   </div>
   <% end %>

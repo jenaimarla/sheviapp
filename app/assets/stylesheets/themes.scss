@@ -17,11 +17,12 @@
 .theme-box {
   width: 70%;
   img {
-  border-style: solid;
-  border-width: 1px;
-  border-radius: 10%;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 10%;
     width: 70%;
     height: 90%;
+    object-fit: cover;
     margin: 30px;
   }
 }

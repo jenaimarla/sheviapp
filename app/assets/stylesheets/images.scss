@@ -77,6 +77,9 @@ and (max-device-width : 568px)
   .image-box {
     height: 80%;
     width: 100%;
+    img {
+      margin: 50px;
+    }
   }
 
 .image-info {
