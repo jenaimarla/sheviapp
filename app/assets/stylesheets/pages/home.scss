@@ -186,7 +186,7 @@ footer {
   }
 }
 
-.photo-box, .p1-box {
+.photo-box {
   img {
     object-fit: contain;
     width: 80%;
@@ -195,6 +195,14 @@ footer {
   }
 }
 
+.p1-box {
+  img {
+    object-fit: contain;
+    width: 80%;
+    height: 70%;
+    margin: 30px;
+  }
+}
 
 div.main{
   overflow:hidden;
@@ -330,7 +338,7 @@ html {
 
 .p2-box {
   border-top-style: none;
-  border-bottom-style: none;
+  border-bottom-style: solid;
   // // border-right-style: solid;
   // border-width: 1px;
   width: 50%;

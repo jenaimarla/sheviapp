@@ -22,13 +22,15 @@
 
 .shop-photo, .shop-poster {
   img {
+    width: 70%;
     margin-top: 30px;
-    margin-left: 65px;
+    margin-left: 60px;
+
   }
 }
 
 .shop-photoinfo {
-  text-align: left;
+  text-align: center;
   padding-left: 10px;
 }
 
@@ -44,14 +46,6 @@ and (max-device-width : 568px)
     margin-top: 30px;
   }
 
-  .shop-photo, .shop-poster {
-    height: 90%;
-    img {
-      margin: auto;
-      height: 400px;
-      width: 100%;
-    }
-}
 
 .shop-photoinfo {
   height: 10%;
