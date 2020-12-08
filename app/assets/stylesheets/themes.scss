@@ -66,3 +66,52 @@
   margin-left: 30%;
 }
 
+
+@media only screen
+and (min-device-width : 320px)
+and (max-device-width : 568px)
+{
+
+  .theme-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    margin-top: 30px;
+}
+
+.theme-box {
+    width: 100%;
+    margin-top: 150px;
+    margin-bottom: 50px;
+    img {
+        width: 90%;
+        height: 90%;
+        margin: 45px;
+    }
+}
+
+.theme-info {
+    width: 100%;
+    margin-left: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.theme-info1 {
+  padding: 20px;
+  h1 {
+    text-align: left;
+   }
+}
+
+.theme-other {
+  margin: 100px auto;
+  // h1 {
+  //   text-align: center;
+  //  }
+}
+
+
+}

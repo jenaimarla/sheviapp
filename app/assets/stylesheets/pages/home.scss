@@ -10,8 +10,6 @@ html {
 .caddy {
   background-color: #9d9d9c;
   border-radius: 50px;
-  // border-style: solid;
-  // border-width: 1px;
   position: relative;
   text-align: right;
   padding-right: 10px;
@@ -263,7 +261,7 @@ html {
   a, h1, p {
     font-family: Helvetica;
     font-weight: lighter;
-    font-size: 20px;
+    font-size: 25px;
   }
 }
 
@@ -289,6 +287,16 @@ html {
   margin-top: -70px;
 }
 
+.links1, .links2 {
+  width: 100%;
+}
+
+.photo-link, .poster-link, .project-link, .shop-link {
+  width: 100%;
+}
+
+
+
 .box-home {
     width: 100%;
     margin-top: 30px;
@@ -303,15 +311,17 @@ html {
 .p-box {
   display: flex;
   width: 100%;
-  border-bottom-style: solid;
   border-top-style: none;
-  // border-right-style: solid;
-  // border-left-style: solid;
+  // border-style: solid;
+  // border-bottom-style: solid;
+  border-right-style: solid;
+  border-left-style: solid;
   border-width: 1px;
 }
 
 .p1-box {
-  border-left-style: solid;
+  border-bottom-style: none;
+  // border-left-style: solid;
   border-right-style: solid;
   border-width: 1px;
   width: 50%;
@@ -321,10 +331,13 @@ html {
 .p2-box {
   border-top-style: none;
   border-bottom-style: none;
-  border-right-style: solid;
-  border-width: 1px;
+  // // border-right-style: solid;
+  // border-width: 1px;
   width: 50%;
   height: 32vh;
+  h1 {
+    font-size: 20px;
+  }
 }
 
 .p-box1 {
@@ -337,19 +350,20 @@ html {
 }
 
 .p-box3 {
-  height: 95%;
+  height: 90%;
 }
 
 .p-box4 {
-  height: 5%;
+  height: 10%;
 }
 
 .shop-box {
-  border-top-style: none;
+  border-top-style: solid;
   width: 100%;
   writing-mode: horizontal-tb;
   height: 3vh;
   text-align: right;
+  border-width: 1px;
 }
 
 footer {

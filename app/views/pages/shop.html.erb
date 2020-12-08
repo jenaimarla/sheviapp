@@ -19,7 +19,7 @@
 
   <% @themes.each do |theme| %>
     <div class="shop-posters">
-      <h1><% if theme.pre_order=='yes' %>
+      <% if theme.pre_order=='yes' %>
         <div class="shop-poster">
           <%= cl_image_tag theme.illustration.key, height: 250, width: 200%>
         </div>
