@@ -98,15 +98,15 @@
 
 @media (max-width: 1250px) {
    .poster-container {
-  grid-template-columns: repeat(2, 1fr);
-  width:100%;
-  height: 100vh;
-  margin-top: 30px;
-}
+    grid-template-columns: repeat(2, 1fr);
+    width:100%;
+    height: 100vh;
+    margin-top: 30px;
+  }
 
 .p1-container {
     height: 600px;
-    width: 50%;
+    width: 90%;
 }
 
 .poster-1 img {
@@ -147,7 +147,7 @@
 
 .p1-container {
     height: 600px;
-    width: 50%;
+    width: 90%;
 }
 
 .poster-1 img {
@@ -190,7 +190,7 @@ and (-webkit-min-device-pixel-ratio: 2)
 
 .p1-container {
     height: 600px;
-    width: 50%;
+    width: 90%;
 }
 
 .poster-1 img {
@@ -226,7 +226,7 @@ and (max-device-width : 568px)
 {
 
 .poster-container {
-  grid-template-columns: repeat(1, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   width:100%;
   height: 100vh;
   margin-top: 30px;
@@ -234,7 +234,7 @@ and (max-device-width : 568px)
 
 .p1-container {
     height: 600px;
-    width: 50%;
+    width: 90%;
 }
 
 .poster-1 img {

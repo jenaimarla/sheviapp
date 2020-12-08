@@ -262,13 +262,6 @@ div.slide-left p {
 
 
 @media (max-width: 1250px) {
-  html {
-  a, h1, p {
-    font-family: Helvetica;
-    font-weight: lighter;
-    font-size: 25px;
-  }
-}
 
  .menu {
   display: flex;
@@ -393,13 +386,7 @@ footer {
   and (max-device-width: 1024px)
   and (-webkit-min-device-pixel-ratio: 2)
   {
-    html {
-  a, h1, p {
-    font-family: Helvetica;
-    font-weight: lighter;
-    font-size: 25px;
-  }
-}
+
 
  .menu {
   display: flex;
@@ -527,13 +514,7 @@ and (max-device-width : 1366px)
 and (-webkit-min-device-pixel-ratio: 2)
 {
 
-html {
-  a, h1, p {
-    font-family: Helvetica;
-    font-weight: lighter;
-    font-size: 25px;
-  }
-}
+
 
  .menu {
   display: flex;
@@ -660,13 +641,7 @@ and (max-device-width : 568px)
 {
 
 
-html {
-  a, h1, p {
-    font-family: Helvetica;
-    font-weight: lighter;
-    font-size: 25px;
-  }
-}
+
 
  .menu {
   display: flex;
