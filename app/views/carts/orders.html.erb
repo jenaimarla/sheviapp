@@ -1,4 +1,5 @@
 
+
   <div class="wrap2">
 
     <% @orders.each do |order|%>
@@ -34,7 +35,7 @@
 
 <div class="box">
   <p>TOTAL <%= @total_orders %> EUR </p>
-  <span><p><%= link_to "checkout", charges_new_path, class:'btn btn-primary'%></p></span>
+  <span><p><%= link_to "checkout", root_path, class:'btn btn-primary'%></p></span>
 </div>
 
 
