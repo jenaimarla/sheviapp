@@ -48,12 +48,6 @@ ActiveRecord::Schema.define(version: 2020_12_10_183756) do
     t.index ["user_id"], name: "index_cards_on_user_id"
   end
 
-  create_table "carts", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.boolean "payed", default: false
-  end
-
   create_table "creations", force: :cascade do |t|
     t.string "name"
     t.string "format"
@@ -70,10 +64,8 @@ ActiveRecord::Schema.define(version: 2020_12_10_183756) do
     t.string "information"
     t.string "pre_order"
     t.string "format"
-    t.bigint "product_id"
     t.integer "price_cents", default: 0, null: false
     t.index ["photo_id"], name: "index_images_on_photo_id"
-    t.index ["product_id"], name: "index_images_on_product_id"
   end
 
   create_table "libraries", force: :cascade do |t|
@@ -105,21 +97,6 @@ ActiveRecord::Schema.define(version: 2020_12_10_183756) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "orders", force: :cascade do |t|
-    t.string "state"
-    t.integer "amount_cents", default: 0, null: false
-    t.string "amount_currency", default: "EUR", null: false
-    t.string "checkout_session_id"
-    t.bigint "user_id"
-    t.bigint "image_id"
-    t.bigint "theme_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["image_id"], name: "index_orders_on_image_id"
-    t.index ["theme_id"], name: "index_orders_on_theme_id"
-    t.index ["user_id"], name: "index_orders_on_user_id"
-  end
-
   create_table "photos", force: :cascade do |t|
     t.string "category"
     t.datetime "created_at", null: false
@@ -131,11 +108,6 @@ ActiveRecord::Schema.define(version: 2020_12_10_183756) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "category"
-  end
-
-  create_table "products", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
   end
 
   create_table "projects", force: :cascade do |t|
@@ -162,15 +134,6 @@ ActiveRecord::Schema.define(version: 2020_12_10_183756) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "shops", force: :cascade do |t|
-    t.bigint "image_id"
-    t.bigint "theme_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["image_id"], name: "index_shops_on_image_id"
-    t.index ["theme_id"], name: "index_shops_on_theme_id"
-  end
-
   create_table "themes", force: :cascade do |t|
     t.string "description"
     t.bigint "poster_id"
@@ -179,11 +142,9 @@ ActiveRecord::Schema.define(version: 2020_12_10_183756) do
     t.string "information"
     t.string "pre_order"
     t.string "format"
-    t.bigint "product_id"
     t.string "name"
     t.integer "price_cents", default: 0, null: false
     t.index ["poster_id"], name: "index_themes_on_poster_id"
-    t.index ["product_id"], name: "index_themes_on_product_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -203,13 +164,6 @@ ActiveRecord::Schema.define(version: 2020_12_10_183756) do
   add_foreign_key "cards", "creations"
   add_foreign_key "cards", "users"
   add_foreign_key "images", "photos"
-  add_foreign_key "images", "products"
   add_foreign_key "libraries", "projects"
-  add_foreign_key "orders", "images"
-  add_foreign_key "orders", "themes"
-  add_foreign_key "orders", "users"
-  add_foreign_key "shops", "images"
-  add_foreign_key "shops", "themes"
   add_foreign_key "themes", "posters"
-  add_foreign_key "themes", "products"
 end

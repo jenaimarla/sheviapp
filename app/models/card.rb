@@ -1,7 +1,6 @@
 class Card < ApplicationRecord
 
   belongs_to :creation
-
   monetize :amount_cents
 
   def total_pay
