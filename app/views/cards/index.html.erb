@@ -1,0 +1,12 @@
+<% @serie_items.each do |item| %>
+  <%= item.creation.name %>
+  <p>Amount: <%= humanized_money_with_symbol(item.creation.price) %></p>
+<% end %>
+
+
+<%= form_tag cards_path(@card) do %>
+  <%= hidden_field_tag 'creation_id', @serie_items %>
+  <%= submit_tag 'Checkout', class: 'btn btn-primary' %>
+<% end %>
+
+

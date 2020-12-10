@@ -50,6 +50,7 @@
 }
 
 .poster-container2 {
+  position: relative;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 0px;

@@ -1,6 +1,5 @@
 Rails.application.routes.draw do
-  get 'charges/new'
-  get 'charges/create'
+
   devise_for :users
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   root to: 'pages#home'
@@ -21,17 +20,13 @@ Rails.application.routes.draw do
     resources :images, only: [ :index, :new, :create ]
   end
 
-  resources :images, only: [ :show, :edit, :update, :destroy ] do
-    resources :order_photos, only: [:create]
-  end
+  resources :images, only: [ :show, :edit, :update, :destroy ]
 
   resources :posters do
     resources :themes, only: [:index, :new, :create ]
   end
 
-  resources :themes, only: [ :show, :edit, :update, :destroy ] do
-    resources :order_posters, only: [:create]
-  end
+  resources :themes, only: [ :show, :edit, :update, :destroy ]
 
   resources :projects do
     resources :libraries, only: [:index, :new, :create ]
@@ -39,17 +34,12 @@ Rails.application.routes.draw do
 
   resources :libraries, only: [ :show, :edit, :update, :destroy ]
 
-  # resources :shops
-  resources :charges, only: [:new, :create]
-
-  resources :order_photos, only: [:destroy]
-  resources :order_posters, only: [:destroy]
-
-  resources :carts, only: [:show] do
-    collection do
-      get "orders"
-    end
+  resources :creations
+  resources :serie_items
+  resources :cards, only: [:index,:new, :create, :show] do
+    resources :payments, only: :new
   end
+
 
 end
 

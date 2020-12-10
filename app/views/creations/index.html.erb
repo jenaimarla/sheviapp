@@ -1,0 +1,20 @@
+
+<% @creations.each do |creation| %>
+    <div class="shop-photos">
+
+      <div class="shop-photoinfo">
+        <h1><%= link_to creation.name, creation_path(creation)  %></h1>
+
+      </div>
+      <% end %>
+    </div>
+
+
+
+<div class="options">
+   <% if current_user %>
+    <%= link_to 'add new product', new_creation_path %>
+    <% end %>
+  <%= link_to 'home', root_path  %>
+</div>
+

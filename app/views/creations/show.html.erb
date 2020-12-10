@@ -1,0 +1,23 @@
+<div class="poster-container2">
+
+ <div class="p3-container">
+
+<h1><%= @creation.name %>
+          <br> <%= @creation.format %> / <%= humanized_money_with_symbol(@creation.price)%></h1>
+
+  </div>
+
+  <%= form_for @serie_item do |f| %>
+  <%= f.hidden_field :creation_id, :value => @creation.id %>
+  <%= f.submit 'add to card' %>
+  <% end %>
+
+
+</div>
+
+
+
+
+<div class="options">
+<%= link_to 'shop', creations_path  %>
+</div>

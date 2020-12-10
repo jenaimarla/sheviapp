@@ -6,7 +6,7 @@
       <%= cl_image_tag poster.cover.key, height: 50, width: 50, crop: :fill %>
     </div>
     <div class="poster-title">
-    <%= link_to poster.title, poster_path(poster)  %>
+    <%= link_to poster.category, poster_path(poster)  %>
     </div>
 
     <% if current_user %>

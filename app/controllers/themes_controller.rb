@@ -6,7 +6,6 @@ class ThemesController < ApplicationController
 
   def show
     @theme = Theme.find(params[:id])
-     @order_poster = OrderPoster.new
   end
 
   def new
@@ -44,7 +43,7 @@ class ThemesController < ApplicationController
   private
 
   def theme_params
-    params.require(:theme).permit(:title, :description, :information, :pre_order, :format, :price_a1, :illustration)
+    params.require(:theme).permit(:name, :description, :information, :pre_order, :format, :price, :illustration)
   end
 end
 

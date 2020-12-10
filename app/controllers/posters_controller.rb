@@ -43,7 +43,7 @@ class PostersController < ApplicationController
   private
 
   def poster_params
-    params.require(:poster).permit(:title, :cover)
+    params.require(:poster).permit(:category, :cover)
   end
 
 end

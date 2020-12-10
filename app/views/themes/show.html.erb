@@ -6,7 +6,7 @@
 
   <div class="theme-info">
     <div class="theme-info1">
-    <h1><%= link_to @theme.title , poster_path%></h1>
+    <h1><%= link_to @theme.name , poster_path%></h1>
     <h1> <%= @theme.description %></h1>
     <div class="theme-options">
        <% if current_user %>
@@ -24,11 +24,7 @@
         <% if @theme.pre_order=='yes' %>
               <h1>PRE ORDER</h1>
 
-          <h1> <%= @theme.format %> - <%= @theme.price_a1 %>€
-            <%= simple_form_for [@theme, @order_poster] do |f| %>
-            <%= f.input :quantity, placeholder: '1', input_html: { value: '1', min: '1', step: 'any' } %>
-            <%= f.submit "Add to card", class: 'btn-primary' %>
-          <% end %></h1>
+          <h1> <%= @theme.format %> - Amount: <%= humanized_money_with_symbol(@theme.price) %>r</h1>
           <% else %>
           <h1>No pre-order</h1>
       <% end %>

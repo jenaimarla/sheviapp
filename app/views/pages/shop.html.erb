@@ -1,35 +1,7 @@
 
 <div class="shop-container">
 
-  <% @images.each do |image| %>
-    <div class="shop-photos">
-      <% if image.pre_order=='yes' %>
-      <div class="shop-photo">
-        <%= cl_image_tag image.image.key, height: 250, width: 200%>
-      </div>
-
-      <div class="shop-photoinfo">
-        <h1> A1 / <%= image.price_a1 %> €</h1>
-      </div>
-      <% end %>
-    </div>
-    <%end %>
-
-
-
-  <% @themes.each do |theme| %>
-    <div class="shop-posters">
-      <% if theme.pre_order=='yes' %>
-        <div class="shop-poster">
-          <%= cl_image_tag theme.illustration.key, height: 250, width: 200%>
-        </div>
-    <div class="shop-photoinfo">
-      <h1> A1 / <%= theme.price_a1 %> €</h1>
-    </div>
-      <% end %>
-    </div>
-  <% end %>
-
+shop
 
 </div>
 

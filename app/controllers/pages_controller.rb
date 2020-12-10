@@ -7,9 +7,7 @@ class PagesController < ApplicationController
   end
 
   def shop
-    @images = Image.all
-    @themes = Theme.all
-    @items = Item.all
+
   end
 
 

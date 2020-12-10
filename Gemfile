@@ -3,6 +3,9 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.6.5'
 
+
+gem 'stripe'
+gem 'money-rails'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.4', '>= 5.2.4.4'
 # Use sqlite3 as the database for Active Record
@@ -67,5 +70,5 @@ gem 'carrierwave', '~> 2.0'
 gem 'cloudinary', '~> 1.16.0'
 gem 'devise'
 
-gem 'stripe'
+
 gem 'jquery-rails'
