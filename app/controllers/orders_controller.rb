@@ -9,7 +9,7 @@ class OrdersController < ApplicationController
     shipping_address_collection: {
     allowed_countries: ['BE'],
   },
-    payment_method_types: ['card', 'bancontact', 'applepay'],
+    payment_method_types: ['card', 'bancontact'],
     line_items: [{
       name: creation.name,
       amount: creation.price_cents,

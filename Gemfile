@@ -5,6 +5,7 @@ ruby '2.6.5'
 
 
 gem 'stripe'
+gem 'stripe_event'
 gem 'money-rails'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.4', '>= 5.2.4.4'
