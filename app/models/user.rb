@@ -13,4 +13,5 @@ class User < ApplicationRecord
   has_many :themes, dependent: :destroy
   has_many :projects, dependent: :destroy
   has_many :libraries, dependent: :destroy
+
 end

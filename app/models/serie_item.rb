@@ -3,6 +3,15 @@ class SerieItem < ApplicationRecord
   belongs_to :creation
   monetize :price_cents
 
+# def total_pay
+#     total = 0
+#     @serie_items.each do |item|
+#       # next if item.quantity.nil?
+#       total += item.quantity * item.creation.price
+#     end
+#     return total
+#   end
+
 
  #  def total_pay
  #    total = 0
@@ -18,26 +27,26 @@ class SerieItem < ApplicationRecord
  #   @total_orders = @my_orders.map(&:total_pay).sum
  #  end
 
-  def unit_price
-    if persisted?
-      self[:price]
-    else
-      creation.price
-    end
-  end
+  # def unit_price
+  #   if persisted?
+  #     self[:price]
+  #   else
+  #     creation.price
+  #   end
+  # end
 
-  def total
-    price * quantity
-  end
+  # def total
+  #   price * quantity
+  # end
 
-  private
+  # private
 
-  def set_unit_price
-    self[:price] = price
-  end
+  # def set_unit_price
+  #   self[:price] = price
+  # end
 
-  def set_total
-    self[:total] = total * quantity
-  end
+  # def set_total
+  #   self[:total] = total * quantity
+  # end
 
 end

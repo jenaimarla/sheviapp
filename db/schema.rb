@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_12_10_183756) do
+ActiveRecord::Schema.define(version: 2020_12_11_135640) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -54,6 +54,9 @@ ActiveRecord::Schema.define(version: 2020_12_10_183756) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "price_cents", default: 0, null: false
+    t.integer "quantity"
+    t.text "description"
+    t.string "information"
   end
 
   create_table "images", force: :cascade do |t|
@@ -95,6 +98,18 @@ ActiveRecord::Schema.define(version: 2020_12_10_183756) do
     t.decimal "total"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "orders", force: :cascade do |t|
+    t.string "state"
+    t.integer "amount_cents", default: 0, null: false
+    t.string "checkout_session_id"
+    t.bigint "user_id"
+    t.bigint "creation_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["creation_id"], name: "index_orders_on_creation_id"
+    t.index ["user_id"], name: "index_orders_on_user_id"
   end
 
   create_table "photos", force: :cascade do |t|
@@ -156,6 +171,7 @@ ActiveRecord::Schema.define(version: 2020_12_10_183756) do
     t.string "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
+    t.string "username"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
@@ -165,5 +181,7 @@ ActiveRecord::Schema.define(version: 2020_12_10_183756) do
   add_foreign_key "cards", "users"
   add_foreign_key "images", "photos"
   add_foreign_key "libraries", "projects"
+  add_foreign_key "orders", "creations"
+  add_foreign_key "orders", "users"
   add_foreign_key "themes", "posters"
 end

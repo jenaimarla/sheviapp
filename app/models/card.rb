@@ -1,14 +1,6 @@
 class Card < ApplicationRecord
-
-  belongs_to :creation
+  # has_many :serie_items
+  # has_many :series
   monetize :amount_cents
-
-  def total_pay
-    total = 0
-    # self.creations.each do |creation|
-    #   next if creation.quantity.nil?
-      total += creation.price
-    # end
-    return total
-  end
+  has_many :creations
 end

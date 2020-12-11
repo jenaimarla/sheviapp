@@ -281,12 +281,29 @@ div.slide-left p {
 }
 
 .menu-2 {
-  width: 100%;
   margin-top: -70px;
+  display: flex;
+    flex: wrap;
+    flex-direction: column;
+    width: 100%;
 }
+
+
+.links {
+  width: 50%;
+    float: right;
+    margin-top: -130px;
+    margin-bottom: 50px;
+    margin-left: auto;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
 
 .links1, .links2 {
   width: 100%;
+  margin: 5px;
 }
 
 .photo-link, .poster-link, .project-link, .shop-link {

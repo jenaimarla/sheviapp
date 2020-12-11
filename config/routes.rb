@@ -34,12 +34,21 @@ Rails.application.routes.draw do
 
   resources :libraries, only: [ :show, :edit, :update, :destroy ]
 
-  resources :creations
-  resources :serie_items
-  resources :cards, only: [:index,:new, :create, :show] do
-    resources :payments, only: :new
+  resources :creations do
+    resources :serie_items, only: [:create]
   end
 
+  resources :serie_items, only: [:destroy]
+
+  resources :series, only: [:show]  do
+    collection  do
+      get "my_orders"
+    end
+  end
+
+resources :orders, only: [:show, :create] do
+  resources :payments, only: :new
+end
 
 end
 

@@ -1,3 +1,41 @@
 // Place all the styles related to the payments controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.payment-container, .container {
+   width:50%;
+  margin: auto;
+  margin-top: -130px;
+  background-color: #9d9d9c;
+  border-style: solid ;
+  border-width: 1px;
+  // border-left: 1px solid black;
+}
+
+.payment, .row.py-4 {
+  width: 80%;
+  margin: auto;
+  text-align: center;
+  padding: 50px;
+  h1, p {
+  font-size: 15px;
+}
+}
+
+
+
+.col {
+  text-align: left;
+  font-family: Helvetica;
+  font-weight: lighter;
+}
+
+button#pay.btn.btn-primary {
+  font-size: 15px;
+  background-color:#39ff14;
+  border-style: none;
+  padding: 10px;
+  border-radius: 50px;
+}
+
+

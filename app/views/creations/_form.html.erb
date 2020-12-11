@@ -1,7 +1,10 @@
 <%= simple_form_for(@creation) do |f| %>
   <%= f.input :name %>
   <%= f.input :format %>
+  <%= f.input :description %>
+  <%= f.input :information %>
   <%= f.input :price, input_html: { min: '1', step: 'any' } %>
+  <%= f.input :svg, as: :file %>
 
 <%= f.submit class: 'btn btn-primary' %>
 <% end %>

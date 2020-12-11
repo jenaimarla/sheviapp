@@ -6,7 +6,7 @@ class CreationsController < ApplicationController
 
   def show
     @creation = Creation.find(params[:id])
-    @serie_item = current_serie.serie_items.new
+    @serie_item = SerieItem.new
   end
 
   def new
@@ -44,6 +44,6 @@ class CreationsController < ApplicationController
   private
 
   def creation_params
-    params.require(:creation).permit(:name, :format, :price)
+    params.require(:creation).permit(:name, :format, :price, :description, :information, :svg)
   end
 end

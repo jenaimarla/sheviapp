@@ -4,9 +4,11 @@
 <% end %>
 
 
-<%= form_tag cards_path(@card) do %>
+<%= form_tag cards_path do %>
   <%= hidden_field_tag 'creation_id', @serie_items %>
   <%= submit_tag 'Checkout', class: 'btn btn-primary' %>
 <% end %>
+
+
 
 
