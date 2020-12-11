@@ -66,6 +66,7 @@ ActiveRecord::Schema.define(version: 2020_12_11_135640) do
     t.datetime "updated_at", null: false
     t.string "information"
     t.string "pre_order"
+    t.integer "price_a2"
     t.string "format"
     t.integer "price_cents", default: 0, null: false
     t.index ["photo_id"], name: "index_images_on_photo_id"
@@ -156,6 +157,7 @@ ActiveRecord::Schema.define(version: 2020_12_11_135640) do
     t.datetime "updated_at", null: false
     t.string "information"
     t.string "pre_order"
+    t.integer "price_a2"
     t.string "format"
     t.string "name"
     t.integer "price_cents", default: 0, null: false
