@@ -10,4 +10,5 @@ class Creation < ApplicationRecord
   validates :price, presence: true
 
 
+
 end
