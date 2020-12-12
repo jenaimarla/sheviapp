@@ -3,7 +3,7 @@
   <% @posters.each do |poster| %>
   <div class="p1-container">
     <div class="poster-1">
-
+      <%= cl_image_tag poster.cover.key, height: 50, width: 50, crop: :fill %>
     </div>
     <div class="poster-title">
     <%= link_to poster.category, poster_path(poster)  %>
