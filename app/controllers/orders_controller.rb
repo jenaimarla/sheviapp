@@ -8,7 +8,7 @@ class OrdersController < ApplicationController
 
   def create
     creation = Creation.find(params[:creation_id])
-    order  = Order.create!(creation: creation, amount: creation.price, quantity: creation.quantity, state: 'pending')
+    order  = Order.create!(creation: creation, amount: creation.price, state: 'pending')
 
     session = Stripe::Checkout::Session.create(
       billing_address_collection: 'required',
@@ -20,7 +20,7 @@ class OrdersController < ApplicationController
         name: creation.name,
         amount: creation.price_cents,
         currency: 'eur',
-        quantity: creation.quantity
+        quantity: 1
       }],
       success_url: order_url(order),
       cancel_url: order_url(order)

@@ -4,7 +4,7 @@
 
   <div class="payment">
     <h1>Checkout summary</h1>
-    <p>Purchase of <strong><%= @order.creation.name %></strong> for <strong><%= humanized_money_with_symbol @order.amount %></strong></p>
+    <p>Purchase of  <%= @order.creation.quantity %><strong><%= @order.creation.name %></strong> for <strong><%= @total_orders %></strong></p>
     <button id="pay" class="btn btn-primary">Pay</button>
 
     <script src="https://js.stripe.com/v3/"></script>
