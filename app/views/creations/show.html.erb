@@ -8,9 +8,7 @@
 
     <div class="shop-button">
 
-      <%= simple_form_for [@creation] do |f| %>
-        <%= f.input :quantity, placeholder: '1', input_html: { value: '1', min: '1', step: 'any' } %>
-        <% end %>
+
 
       <div class="form-shop">
         <%= form_tag orders_path do %>
