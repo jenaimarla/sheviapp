@@ -128,9 +128,6 @@
     grid-gap: 0px;
     width: 100%;
     margin-top:30px;
-     h1, a {
-    font-size: 20px;
-  }
   }
 
   .photo-1 {
@@ -146,9 +143,6 @@
     justify-content: space-between;
     margin: 10px auto;
     width: 100%;
-     a {
-    font-size: 20px;
-  }
 }
 
 
@@ -159,9 +153,6 @@
     width: 100%;
     margin: auto;
     margin-top: 150px;
-    h1, a {
-    font-size: 20px;
-  }
 }
 
 .photo-desciption {
@@ -190,6 +181,9 @@
     grid-gap: 0px;
     width: 100%;
     margin-top:30px;
+    h1, a, p {
+      font-size: 20px;
+    }
   }
 
   .photo-1 {
@@ -205,6 +199,9 @@
     justify-content: space-between;
     margin: 10px auto;
     width: 100%;
+    h1, a, p {
+      font-size: 20px;
+    }
 }
 
 
@@ -215,6 +212,9 @@
     width: 100%;
     margin: auto;
     margin-top: 150px;
+    h1, a {
+    font-size: 20px;
+  }
 }
 
 .photo-desciption {
@@ -243,6 +243,9 @@ and (-webkit-min-device-pixel-ratio: 2)
     grid-gap: 0px;
     width: 100%;
     margin-top:30px;
+    h1, a, p {
+      font-size: 20px;
+    }
   }
 
   .photo-1 {
@@ -268,6 +271,9 @@ and (-webkit-min-device-pixel-ratio: 2)
     width: 100%;
     margin: auto;
     margin-top: 150px;
+    h1, a, p {
+      font-size: 20px;
+    }
 }
 
 .photo-desciption {
@@ -328,6 +334,9 @@ and (-webkit-min-device-pixel-ratio: 2)
     width: 100%;
     margin: auto;
     margin-top: 150px;
+    h1, a, p {
+      font-size: 20px;
+    }
 }
 
 .photo-desciption {
@@ -352,5 +361,29 @@ and (-webkit-min-device-pixel-ratio: 2)
   and (min-device-width: 320px)
   and (max-device-width: 568px)
   and (-webkit-min-device-pixel-ratio: 2) {
+    .photo-container {
+
+    h1, a {
+    font-size: 20px;
+  }
+  }
+
+  .photo-container2 {
+
+    h1, a, p {
+      font-size: 20px;
+    }
+}
+
+
+    .options {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px auto;
+    width: 100%;
+    a {
+    font-size: 20px;
+  }
+}
   }
 
