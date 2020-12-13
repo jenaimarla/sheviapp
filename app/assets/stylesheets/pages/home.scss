@@ -308,9 +308,7 @@ div.slide-left p {
     position: relative;
     display: flex;
     flex-direction: column;
-    a {
-      font-size: 15px;
-    }
+
 }
 
 
@@ -365,9 +363,7 @@ div.slide-left p {
   // border-width: 1px;
   width: 50%;
   height: 100%;
-  h1 {
-    font-size: 15px;
-  }
+
 }
 
 .p-box1 {
@@ -377,9 +373,6 @@ div.slide-left p {
 
 .p-box2 {
   height: 10%;
-  a {
-    font-size: 15px;
-  }
 }
 
 .p-box3 {
@@ -388,9 +381,7 @@ div.slide-left p {
 
 .p-box4 {
   height: 10%;
-  a {
-    font-size: 15px;
-  }
+
 }
 
 .shop-box {
@@ -400,9 +391,7 @@ div.slide-left p {
   height: 5%;
   text-align: right;
   border-width: 1px;
-  a {
-    font-size: 15px;
-  }
+
 }
 
 footer {
@@ -414,7 +403,6 @@ footer {
       padding: 5px;
       margin-top: 10px;
       width: 100%;
-      font-size: 15px;
     }
   }
 
@@ -826,3 +814,48 @@ footer {
   }
 
 }
+
+@media only screen
+  and (min-device-width: 320px)
+  and (max-device-width: 568px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+    .links1, .links2 {
+  width: 100%;
+   a {
+    font-size: 20px;
+  }
+}
+
+      .p-box1 {
+  height:95%;
+  margin-left: 10%;
+}
+
+.p-box2 {
+  height: 5%;
+   a {
+    font-size: 20px;
+  }
+}
+
+.p-box3 {
+  height: 95%;
+}
+
+.p-box4 {
+  height: 5%;
+   a {
+    font-size: 20px;
+  }
+
+}
+
+.shop-box {
+
+    a {
+    font-size: 20px;
+  }
+
+}
+}
+
