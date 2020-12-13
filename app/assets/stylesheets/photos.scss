@@ -8,10 +8,13 @@
   grid-gap: 0px;
   width:50%;
   margin: auto;
-  margin-top: -160px;
+  margin-top: -130px;
   background-color: #9d9d9c;
   border-top: 1px solid black;
   border-left: 1px solid black;
+  h1, a {
+    font-size: 13px;
+  }
 }
 
 .photo-desciption {
@@ -37,6 +40,9 @@
   background-color: #9d9d9c;
   border-top: 1px solid black;
   border-left: 1px solid black;
+  h1, a {
+    font-size: 13px;
+  }
 }
 
 .p-container {
@@ -63,6 +69,7 @@
     width: 33%;
     text-align: center;
     background-color: #9d9d9c;
+    font-size: 13px;
   }
 }
 
@@ -121,6 +128,9 @@
     grid-gap: 0px;
     width: 100%;
     margin-top:30px;
+     h1, a {
+    font-size: 20px;
+  }
   }
 
   .photo-1 {
@@ -136,6 +146,9 @@
     justify-content: space-between;
     margin: 10px auto;
     width: 100%;
+     a {
+    font-size: 20px;
+  }
 }
 
 
@@ -146,6 +159,9 @@
     width: 100%;
     margin: auto;
     margin-top: 100px;
+    h1, a {
+    font-size: 20px;
+  }
 }
 
 .photo-desciption {
@@ -198,11 +214,11 @@
     grid-gap: 0px;
     width: 100%;
     margin: auto;
-    margin-top: 100px;
+    margin-top: 150px;
 }
 
 .photo-desciption {
-    margin-top: -60px;
+    margin-top: -100px;
     width: 98%;
 
 }
@@ -251,11 +267,11 @@ and (-webkit-min-device-pixel-ratio: 2)
     grid-gap: 0px;
     width: 100%;
     margin: auto;
-    margin-top: 100px;
+    margin-top: 150px;
 }
 
 .photo-desciption {
-    margin-top: -60px;
+    margin-top: -100px;
     width: 98%;
 
 }
@@ -281,6 +297,9 @@ and (-webkit-min-device-pixel-ratio: 2)
     grid-gap: 0px;
     width: 100%;
     margin-top:30px;
+    h1, a {
+    font-size: 20px;
+  }
   }
 
   .photo-1 {
@@ -296,6 +315,9 @@ and (-webkit-min-device-pixel-ratio: 2)
     justify-content: space-between;
     margin: 10px auto;
     width: 100%;
+    a {
+    font-size: 20px;
+  }
 }
 
 
@@ -305,11 +327,11 @@ and (-webkit-min-device-pixel-ratio: 2)
     grid-gap: 0px;
     width: 100%;
     margin: auto;
-    margin-top: 100px;
+    margin-top: 150px;
 }
 
 .photo-desciption {
-    margin-top: -60px;
+    margin-top: -100px;
     width: 98%;
 
 }
