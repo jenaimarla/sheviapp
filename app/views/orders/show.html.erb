@@ -1,17 +1,16 @@
 <div class="order">
 
     <div class="order-show">
+        <h1>Order #<%= @order.id %> <small><span class="badge badge-primary"><%= @order.state %></span></small></h1>
+    </div>
 
-  <br>
-          <h1>Order #<%= @order.id %> <small><span class="badge badge-primary"><%= @order.state %></span></small></h1>
-        </div>
         <h1>ISSUED ON <%= @order.created_at.to_date %></h1>
-        <br><h1>PRODUCT <%= @order.creation.name %></h1>
-        <br><h1>TOTAL<%= humanized_money_with_symbol @order.amount %></h1>
+        <h1>PRODUCT <%= @order.creation.name %></h1>
+        <h1>TOTAL<%= humanized_money_with_symbol @order.amount %></h1>
       <p> Thank you for your purchase</p>
 
-    </div>
 </div>
+
 
 
 
