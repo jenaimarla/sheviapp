@@ -221,6 +221,9 @@ div.main{
   padding:15px;
   height: auto;
   background-color: #39ff14;
+  p {
+    font-size: 13px;
+  }
 }
 
 
@@ -546,6 +549,12 @@ footer {
     }
   }
 
+  div.main{
+  p {
+    font-size: 20px;
+  }
+}
+
 
 }
 
@@ -673,6 +682,12 @@ footer {
       width: 100%;
     }
   }
+
+    div.main{
+  p {
+    font-size: 20px;
+  }
+}
 
 
 }
@@ -813,6 +828,12 @@ footer {
     }
   }
 
+    div.main{
+  p {
+    font-size: 20px;
+  }
+}
+
 }
 
 @media only screen
@@ -850,6 +871,12 @@ footer {
 
 }
 
+.p2-box {
+  h1 {
+    font-size: 20px;
+  }
+}
+
 .shop-box {
 
     a {
@@ -860,6 +887,12 @@ footer {
 
 footer {
   a {
+    font-size: 20px;
+  }
+}
+
+  div.main{
+  p {
     font-size: 20px;
   }
 }
