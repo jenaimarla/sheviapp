@@ -22,9 +22,9 @@
     <div class="theme-other">
         <h1> <%= @theme.information %> </h1>
         <% if @theme.pre_order=='yes' %>
-              <h1>PRE ORDER</h1>
+              <h1>AVAILABLE ON PRE-ORDER</h1>
 
-          <h1> <%= @theme.format %> - Amount: <%= humanized_money_with_symbol(@theme.price) %></h1>
+          <h1> <%= @theme.format %> - <%= humanized_money_with_symbol(@theme.price) %></h1>
           <% else %>
           <h1>No pre-order</h1>
       <% end %>
