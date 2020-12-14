@@ -305,7 +305,7 @@ div.slide-left p {
 .links {
   width: 50%;
     float: right;
-    margin-top: -130px;
+    margin-top: -150px;
     margin-bottom: 50px;
     margin-left: auto;
     position: relative;
@@ -328,7 +328,7 @@ div.slide-left p {
 
 .box-home {
     width: 100%;
-    margin-top: 30px;
+    margin-top: 70px;
     flex-direction: column;
 }
 
@@ -456,7 +456,7 @@ footer {
 
 .box-home {
     width: 100%;
-    margin-top: 30px;
+    margin-top: 50px;
     flex-direction: column;
 }
 
@@ -602,7 +602,7 @@ and (-webkit-min-device-pixel-ratio: 2)
 
 .box-home {
     width: 100%;
-    margin-top: 30px;
+    margin-top: 50px;
     flex-direction: column;
 }
 
@@ -740,7 +740,7 @@ footer {
 
 .box-home {
     width: 100%;
-    margin-top: 30px;
+    margin-top: 50px;
     flex-direction: column;
 }
 
@@ -886,6 +886,10 @@ footer {
     font-size: 20px;
   }
 
+}
+
+.links {
+  margin-top: -150px;
 }
 
 footer {
