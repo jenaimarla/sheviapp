@@ -2,7 +2,8 @@
 <% @creations.each do |creation| %>
     <div class="shop-photos">
       <div class="shop-photo">
-        <%= cl_image_tag creation.svg.key, height: 200, width: 250 %>
+        <%= link_to cl_image_tag(creation.svg.key, height: 200, width: 250), creation_path(creation) %>
+
       </div>
 
       <div class="shop-photoinfo">
