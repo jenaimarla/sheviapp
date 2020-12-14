@@ -2,7 +2,7 @@
 <% @creations.each do |creation| %>
     <div class="shop-photos">
       <div class="shop-photo">
-
+        <%= cl_image_tag creation.svg.key, height: 200, width: 250 %>
       </div>
 
       <div class="shop-photoinfo">
@@ -18,7 +18,7 @@
    <% if current_user %>
     <%= link_to 'add new product', new_creation_path %>
     <% end %>
-  <%= link_to 'home', root_path  %>
+
 </div>
 
 
