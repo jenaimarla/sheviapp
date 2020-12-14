@@ -85,8 +85,10 @@
 input {
   width: 100px;
   font-size: 15px;
-  background-color:#39ff14;
-  border-style: none;
+  background-color: #9d9d9c;
+  border-color:#39ff14;
+  border-style: solid;
+  border-width: 1px;
   // padding: 10px;
   border-radius: 50px;
   font-size: 13px;
