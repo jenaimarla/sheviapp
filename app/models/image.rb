@@ -6,6 +6,4 @@ class Image < ApplicationRecord
   validates :name, presence: true
   validates :information, presence: true
   validates :pre_order, presence: true
-  validates :format, presence: true
-  validates :price, presence: true
 end

@@ -12,11 +12,7 @@
         <h1> <%= @image.information %> </h1>
 
         <% if @image.pre_order=='yes' %>
-          <h1>PRE ORDER</h1>
-
-          <h1> <%= @image.format %> / Amount:<%= humanized_money_with_symbol(@image.price)%></h1>
-        <% else %>
-          <h1>No pre-order</h1>
+          <h1> <a href="mailto: hello@worldof2c.com">ON DEMAND</a> </h1>
         <% end %>
     </div>
   </div>
