@@ -76,7 +76,7 @@
   margin: auto;
 }
 
-input{
+input {
   width: 100px;
   font-size: 15px;
   background-color:#39ff14;
@@ -96,6 +96,13 @@ input{
 }
 
 
+.shop-title, .shop-description, .shop-other {
+  width: 100%;
+
+.photo-options {
+  text-align: center;
+}
+}
 
 
 @media (max-width: 1250px) {
