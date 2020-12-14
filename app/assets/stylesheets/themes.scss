@@ -75,16 +75,16 @@
     display: flex;
     flex-direction: column;
     width: 100%;
-    height: 100vh;
-    margin-top: 30px;
+    height: 800px;
+    margin-top: 50px;
 }
 
 .theme-box {
     height: 80%;
     width: 100%;
     img {
-        width: 90%;
-        margin-left: 45px;
+        width: 50%;
+        margin-left:25%;
     }
 }
 
@@ -98,8 +98,8 @@
 
 }
 
-.theme-info1 {
-  padding: 20px;
+.theme-info1, .theme-other {
+  padding: 50px;
   h1 {
     text-align: left;
    }
@@ -116,8 +116,8 @@
     display: flex;
     flex-direction: column;
     width: 100%;
-    height: 100vh;
-    margin-top: 30px;
+    height: 1200px;
+    margin-top: 50px;
     h1, a, p {
     font-size: 20px;
   }
@@ -142,15 +142,15 @@
 
 }
 
-.theme-info1 {
-  padding: 20px;
-  h1 {
-    text-align: left;
-   }
+// .theme-info1 {
+//   padding: 20px;
+//   h1 {
+//     text-align: left;
+//    }
+// }
+
+
 }
-
-
-  }
 
 @media only screen
 and (min-device-width : 1024px)
@@ -161,8 +161,8 @@ and (-webkit-min-device-pixel-ratio: 2)
     display: flex;
     flex-direction: column;
     width: 100%;
-    height: 100vh;
-    margin-top: 30px;
+    height: 1200px;
+    margin-top: 50px;
     h1, a, p {
     font-size: 20px;
   }
@@ -186,15 +186,6 @@ and (-webkit-min-device-pixel-ratio: 2)
     justify-content: space-around;
 
 }
-
-.theme-info1 {
-  padding: 20px;
-  h1 {
-    text-align: left;
-   }
-}
-
-
 
 
 }
@@ -209,15 +200,15 @@ and (-webkit-min-device-pixel-ratio: 2)
     display: flex;
     flex-direction: column;
     width: 100%;
-    height: 100vh;
-    margin-top: 30px;
+    height: 1200px;
+    margin-top: 50px;
     h1, a, p {
     font-size: 20px;
   }
 }
 
 .theme-box {
-  height: 90%;
+  height: 70%;
     width: 100%;
     margin-top: 50px;
     margin-bottom: 50px;
@@ -229,7 +220,7 @@ and (-webkit-min-device-pixel-ratio: 2)
 }
 
 .theme-info {
-  height: 10%;
+  height: 30%;
     width: 100%;
     margin-top: 100px;
     margin-left: 0px;
@@ -263,10 +254,26 @@ and (-webkit-min-device-pixel-ratio: 2)
   and (max-device-width: 568px)
   and (-webkit-min-device-pixel-ratio: 2) {
       .theme-container {
+        height: 1500px;
 
     h1, a, p {
     font-size: 20px;
   }
+}
+
+.theme-box {
+  img {
+    width: 90%;
+    margin: 45px;
+  }
+}
+
+.theme-info {
+  margin-top: 50px;
+}
+
+.theme-info1, .theme-other {
+  padding: 50px;
 }
 
     }
