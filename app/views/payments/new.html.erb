@@ -7,8 +7,8 @@
     <%= cl_image_tag @order.creation.svg.key %>
     </div>
     <div class="payment2">
-      <button id="pay" >checkout</button>
       <p>Purchase of <strong><%= @order.creation.name %></strong> for <strong><%= humanized_money_with_symbol @order.amount %></strong></p>
+      <button id="pay" >checkout</button>
       <script src="https://js.stripe.com/v3/"></script>
       <script>
         const paymentButton = document.getElementById('pay');
