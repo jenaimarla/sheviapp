@@ -4,10 +4,18 @@
         <h1>Order #<%= @order.id %>- <%= @order.state %></h1>
     </div>
 
+    <% if @order.state == 'pending' %>
+    <h1>no payment made</h1>
+    <% else %>
+
         <h1>ISSUED ON <%= @order.created_at.to_date %></h1>
         <h1><%= @order.creation.name %></h1>
         <h1>TOTAL<%= humanized_money_with_symbol @order.amount %></h1>
       <br><p> Thank you for your purchase</p>
+    <% end %>
+
+
+
 
 </div>
 
