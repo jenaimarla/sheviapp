@@ -1,7 +1,7 @@
 <div class="order">
 
     <div class="order-show">
-        <h1>Order #<%= @order.id %></h1>
+        <h1>Order #<%= @order.id %>- <%= @order.state %></h1>
     </div>
 
         <h1>ISSUED ON <%= @order.created_at.to_date %></h1>
