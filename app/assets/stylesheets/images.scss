@@ -40,7 +40,7 @@
 }
 
 .image-info1 {
-  padding: 5px;
+  padding-right: 20px;
   h1 {
     text-align: right;
   }
@@ -50,7 +50,7 @@
 }
 
 .image-other {
-  padding: 5px;
+  padding-right: 20px;
   h1 {
     text-align: left;
   }
@@ -88,10 +88,9 @@
     height: 25%;
       width: 100%;
       justify-content: space-around;
-
   }
 
-  .image-other {
+  .image-other, .image-info1 {
     h1 {
       text-align: right;
     }
