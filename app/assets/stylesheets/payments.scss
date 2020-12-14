@@ -62,6 +62,7 @@ button#pay {
   }
 
   button#pay {
+    width: 150px;
     font-size: 20px;
   }
 
@@ -79,6 +80,7 @@ and (-webkit-min-device-pixel-ratio: 2)
   }
 
   button#pay {
+     width: 150px;
     font-size: 20px;
   }
 }
@@ -95,6 +97,7 @@ and (max-device-width : 568px)
   }
 
   button#pay {
+     width: 150px;
     font-size: 20px;
   }
 }
