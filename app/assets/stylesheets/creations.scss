@@ -58,11 +58,16 @@
 
 //prendra la place de l'image uploadé
 .shop-image {
+  height: 90%;
   img {
     width: 80%;
-    height: 90%;
+    height: 80%;
     margin: 45px;
   }
+}
+
+.shop-button {
+  height: 10%;
 }
 
 .shop-show1 {
