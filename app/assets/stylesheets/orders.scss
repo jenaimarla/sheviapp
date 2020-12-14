@@ -1,3 +1,33 @@
 // Place all the styles related to the orders controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.order {
+  position: relative;
+  width:50%;
+  height: 300px;
+  margin: auto;
+  margin-top: -130px;
+  background-color: #9d9d9c;
+  border-style: solid ;
+  border-width: 1px;
+  // display:flex;
+  // flex-direction: column;
+  // justify-content:space-around;
+  // border-left: 1px solid black;
+  h1, p, a {
+    font-size: 13px;
+    text-align: center;
+    color: black;
+  }
+}
+
+.order-show, .order-state {
+  width:100%;
+  height: 20%;
+  margin: auto;
+}
+
+.order-show{
+  margin-top: 100px;
+}
