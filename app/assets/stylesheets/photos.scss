@@ -156,7 +156,7 @@
 }
 
 .photo-desciption {
-    margin-top: -100px;
+    margin-top: -70px;
     width: 98%;
 
 }
@@ -211,14 +211,14 @@
     grid-gap: 0px;
     width: 100%;
     margin: auto;
-    margin-top: 130px;
+    margin-top: 180px;
     h1, a {
     font-size: 20px;
   }
 }
 
 .photo-desciption {
-    margin-top: -100px;
+    margin-top: -120px;
     width: 98%;
 
 }
@@ -270,14 +270,14 @@ and (-webkit-min-device-pixel-ratio: 2)
     grid-gap: 0px;
     width: 100%;
     margin: auto;
-    margin-top: 130px;
+    margin-top: 180px;
     h1, a, p {
       font-size: 20px;
     }
 }
 
 .photo-desciption {
-    margin-top: -100px;
+    margin-top: -120px;
     width: 98%;
 
 }
@@ -340,7 +340,7 @@ and (-webkit-min-device-pixel-ratio: 2)
 }
 
 .photo-desciption {
-    margin-top: -130px;
+    margin-top: -120px;
     width: 98%;
 
 }
@@ -370,12 +370,17 @@ and (-webkit-min-device-pixel-ratio: 2)
   }
 
   .photo-container2 {
+    margin-top: 200px;
 
     h1, a, p {
       font-size: 20px;
     }
 }
 
+
+.photo-desciption {
+  margin-top: -150px;
+}
 
     .options {
     display: flex;
