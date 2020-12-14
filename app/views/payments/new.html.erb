@@ -3,20 +3,23 @@
 <div class="payment-container">
 
   <div class="payment">
-    <button id="pay" >checkout</button>
+    <div class="payment1">
     <%= cl_image_tag @order.creation.svg.key %>
-    <p>Purchase of <strong><%= @order.creation.name %></strong> for <strong><%= humanized_money_with_symbol @order.amount %></strong></p>
-
-    <script src="https://js.stripe.com/v3/"></script>
-    <script>
-      const paymentButton = document.getElementById('pay');
-      paymentButton.addEventListener('click', () => {
-        const stripe = Stripe('<%= ENV['STRIPE_PUBLISHABLE_KEY'] %>');
-        stripe.redirectToCheckout({
-          sessionId: '<%= @order.checkout_session_id %>'
+    </div>
+    <div class="payment2">
+      <button id="pay" >checkout</button>
+      <p>Purchase of <strong><%= @order.creation.name %></strong> for <strong><%= humanized_money_with_symbol @order.amount %></strong></p>
+      <script src="https://js.stripe.com/v3/"></script>
+      <script>
+        const paymentButton = document.getElementById('pay');
+        paymentButton.addEventListener('click', () => {
+          const stripe = Stripe('<%= ENV['STRIPE_PUBLISHABLE_KEY'] %>');
+          stripe.redirectToCheckout({
+            sessionId: '<%= @order.checkout_session_id %>'
+          });
         });
-      });
-    </script>
+      </script>
+    </div>
   </div>
 
 </div>

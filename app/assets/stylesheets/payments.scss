@@ -19,6 +19,8 @@
 }
 
 .payment {
+  display: flex;
+  justify-content: space-around;
   width: 80%;
   margin: auto;
   text-align: center;
@@ -27,6 +29,18 @@
   font-size: 13px;
 }
 }
+
+.payment1, .payment2 {
+  width: 50%;
+  img {
+    width: 100%;
+  }
+}
+
+.payment2 {
+  margin: auto;
+}
+
 
 
 button#pay {
