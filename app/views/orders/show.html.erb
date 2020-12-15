@@ -15,7 +15,7 @@
           <h1>Issued on <%= @order.created_at.to_date %></h1>
           <h1>Poster "<%= @order.creation.name %>"</h1>
           <h1>Total<%= humanized_money_with_symbol @order.amount %></h1>
-        <br><p> Thank you for your purchase</p>
+        <p> Thank you for your purchase</p>
       <% end %>
 
     </div>
