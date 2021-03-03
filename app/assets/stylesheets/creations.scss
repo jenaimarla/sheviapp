@@ -3,7 +3,7 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .shop-container {
-  position: relative;
+  // position: relative;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 0px;
@@ -20,6 +20,17 @@
   }
 }
 
+#collection-component-1614777226323 {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-gap: 0px;
+  width:50%;
+  margin: auto;
+  margin-top: -130px;
+  background-color: #9d9d9c;
+  border: 1px solid black;
+}
 
 .shop-photos {
   // height: 400px;
@@ -129,7 +140,7 @@
 
 
 @media (max-width: 1250px) {
-  .shop-container {
+  #collection-component-1614776796502 {
       grid-template-columns: repeat(2, 1fr);
       width:100%;
       margin-top: 50px;
@@ -207,7 +218,7 @@
   and (max-device-width: 1024px)
   and (-webkit-min-device-pixel-ratio: 2)
   {
-    .shop-container {
+    #collection-component-1614776796502 {
       grid-template-columns: repeat(2, 1fr);
       width:100%;
       margin-top: 50px;
@@ -242,7 +253,7 @@ and (min-device-width : 1024px)
 and (max-device-width : 1366px)
 and (-webkit-min-device-pixel-ratio: 2)
 {
-  .shop-container {
+  #collection-component-1614776796502 {
       grid-template-columns: repeat(2, 1fr);
       width:100%;
       margin-top: 50px;
@@ -281,7 +292,7 @@ and (min-device-width : 320px)
 and (max-device-width : 568px)
 {
 
-  .shop-container {
+  #collection-component-1614776796502 {
     grid-template-columns: repeat(2, 1fr);
     width:100%;
     margin-top: 50px;
