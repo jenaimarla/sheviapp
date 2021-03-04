@@ -28,7 +28,7 @@
 </div> -->
 
 
-<div id='collection-component-1614790533595'></div>
+<div id='collection-component-1614848487216'></div>
 <script type="text/javascript">
 /*<![CDATA[*/
 (function () {
@@ -57,7 +57,7 @@
     ShopifyBuy.UI.onReady(client).then(function (ui) {
       ui.createComponent('collection', {
         id: '260765712590',
-        node: document.getElementById('collection-component-1614790533595'),
+        node: document.getElementById('collection-component-1614848487216'),
         moneyFormat: '%E2%82%AC%7B%7Bamount_with_comma_separator%7D%7D',
         options: {
   "product": {
@@ -74,7 +74,10 @@
           "position": "absolute",
           "left": "0",
           "right": "0",
-          "top": "0"
+          "top": "0",
+          "border-style": "solid",
+          "border-width": "1px",
+          "border-radius": "20px"
         },
         "imgWrapper": {
           "padding-top": "calc(75% + 15px)",
@@ -109,7 +112,12 @@
         "padding-bottom": "14.5px"
       },
       "price": {
-        "color": "#000000"
+        "color": "#000000",
+         "border-style": "solid",
+        "border-width": "1px",
+        "border-radius": "20px",
+        "width": "70px",
+        "padding": "5px"
       },
       "compareAt": {
         "color": "#000000"
@@ -174,31 +182,34 @@
         "padding-bottom": "14.5px"
       },
       "title": {
-        "font-family": "Helvetica Neue, sans-serif",
-        "font-weight": "normal",
-        "font-size": "26px",
+        "font-family": "Helvetica",
+        "font-weight": "lighter",
+        "font-size": "20px",
         "color": "#000000"
       },
       "price": {
-        "font-family": "Helvetica Neue, sans-serif",
-        "font-weight": "normal",
+        "font-family": "Helvetica",
+        "font-weight": "lighter",
         "font-size": "14px",
-        "color": "#000000"
+        "color": "#000000",
+         "border-style": "none"
       },
       "compareAt": {
-        "font-family": "Helvetica Neue, sans-serif",
-        "font-weight": "normal",
+        "font-family": "Helvetica",
+        "font-weight": "lighter",
         "font-size": "11.9px",
         "color": "#000000"
       },
       "unitPrice": {
-        "font-family": "Helvetica Neue, sans-serif",
-        "font-weight": "normal",
+        "font-family": "Helvetica",
+        "font-weight": "lighter",
         "font-size": "11.9px",
         "color": "#000000"
       },
       "description": {
-        "color": "#000000"
+        "color": "#000000",
+         "font-family": "Helvetica",
+        "font-weight": "lighter"
       }
     },
     "text": {
@@ -230,7 +241,9 @@
         }
       },
       "title": {
-        "color": "#000000"
+        "color": "#000000",
+        "font-family": "Helvetica",
+        "font-weight": "lighter"
       },
       "header": {
         "color": "#000000"
@@ -251,9 +264,9 @@
         "color": "#000000"
       },
       "close": {
-        "color": "#000000",
+        "color": "#39ff14",
         ":hover": {
-          "color": "#000000"
+          "color": "#39ff14"
         }
       },
       "empty": {

@@ -20,7 +20,7 @@
   }
 }
 
-#collection-component-1614790533595{
+#collection-component-1614848487216{
   position: relative;
   display: grid;
   grid-template-columns: repeat(1, 1fr);
@@ -30,6 +30,7 @@
   margin-top: -130px;
   background-color: #9d9d9c;
   border: 1px solid black;
+  padding-top: 50px;
 }
 
 .shop-photos {
@@ -140,8 +141,8 @@
 
 
 @media (max-width: 1250px) {
-  #collection-component-1614776796502 {
-      grid-template-columns: repeat(2, 1fr);
+  #collection-component-1614848487216 {
+      grid-template-columns: repeat(1, 1fr);
       width:100%;
       margin-top: 50px;
     }
@@ -218,8 +219,8 @@
   and (max-device-width: 1024px)
   and (-webkit-min-device-pixel-ratio: 2)
   {
-    #collection-component-1614776796502 {
-      grid-template-columns: repeat(2, 1fr);
+    #collection-component-1614848487216 {
+      grid-template-columns: repeat(1, 1fr);
       width:100%;
       margin-top: 50px;
       h1, p, a {
@@ -253,8 +254,8 @@ and (min-device-width : 1024px)
 and (max-device-width : 1366px)
 and (-webkit-min-device-pixel-ratio: 2)
 {
-  #collection-component-1614776796502 {
-      grid-template-columns: repeat(2, 1fr);
+  #collection-component-1614848487216 {
+      grid-template-columns: repeat(1, 1fr);
       width:100%;
       margin-top: 50px;
       h1, p, a {
@@ -292,8 +293,8 @@ and (min-device-width : 320px)
 and (max-device-width : 568px)
 {
 
-  #collection-component-1614776796502 {
-    grid-template-columns: repeat(2, 1fr);
+  #collection-component-1614848487216 {
+    grid-template-columns: repeat(1, 1fr);
     width:100%;
     margin-top: 50px;
     h1, p, a {
